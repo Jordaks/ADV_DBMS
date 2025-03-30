@@ -19,7 +19,7 @@
                         <div class="hidden sm:ml-6 sm:block">
                             <div class=" flex space-x-4">
                             <img src="/image/R.png" alt="Logo" class="w-8 h-8">
-                            <a href="#" class="hover:scale-110 transition duration-500 rounded-md bg-gray-900 px-3 py-2 text-sm font-bold text-white" aria-current="page">Home</a>
+                            <a href="#" class="active hover:scale-110 hover:text-white hover:bg-gray-700 transition duration-500 rounded-md px-3 py-2 text-sm font-bold text-black">Home</a>
                             <a href="#t-shirt" class="hover:scale-110 transition duration-500 rounded-md px-3 py-2 text-sm  font-bold text-black hover:bg-gray-700 hover:text-white">T-shirt</a>
                             <a href="#shorts" class="hover:scale-110 transition duration-500 rounded-md px-3 py-2 text-sm font-bold text-black hover:bg-gray-700 hover:text-white">Shorts</a>
                             <a href="#shoes" class="hover:scale-110 transition duration-500 rounded-md px-3 py-2 text-sm font-bold text-black hover:bg-gray-700 hover:text-white">Shoes</a>
@@ -31,13 +31,17 @@
                         
                     </div>
                         <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 space-x-4">
-                            <button class="p-3 hover:scale-110 transition duration-500">
-                                <span>
-                                        <svg class="fill-current text-black w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <button class="p-3 ">
+                                    <span>
+                                        <svg class="hover:scale-110 transition duration-500 fill-current text-black w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                             <path fill-rule="evenodd" d="M7.5 6v.75H5.513c-.96 0-1.764.724-1.865 1.679l-1.263 12A1.875 1.875 0 0 0 4.25 22.5h15.5a1.875 1.875 0 0 0 1.865-2.071l-1.263-12a1.875 1.875 0 0 0-1.865-1.679H16.5V6a4.5 4.5 0 1 0-9 0ZM12 3a3 3 0 0 0-3 3v.75h6V6a3 3 0 0 0-3-3Zm-3 8.25a3 3 0 1 0 6 0v-.75a.75.75 0 0 1 1.5 0v.75a4.5 4.5 0 1 1-9 0v-.75a.75.75 0 0 1 1.5 0v.75Z" clip-rule="evenodd" />
-                                        </svg>                          
+                                        </svg>
+                                        
+                                        <span class="bg-red-500 text-white text-xs rounded-full flex items-center justify-center absolute top-7 left-[79%] px-1 py-[2px]">0
+                                        </span>
                                     </span>
                             </button>
+
                                 <div class="hover:scale-110 transition duration-500 relative ml-3 border-2 rounded-xl border-black bg-white hover:border-gray-500">
                                     <a href="log_in.html" target="_blank">
                                         <button type="button" class="ml-1.5 mr-1.5  hover:scale-110 transition duration-500 relative rounded-full p-1 text-black hover:text-gray-500 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden font-bold"> LOG IN
@@ -564,7 +568,7 @@
                     </div>
                 
                     <div class="bg-orange-50">
-                        <h1 class=" ml-20 pt-5 text-4xl font-bold tracking-tight text-gray-900""><section id="shoes">Latest Thrift</section></h1>
+                        <h3 class=" ml-20 pt-5 text-4xl font-bold tracking-tight text-gray-900""><section id="shoes">Latest Thrift</section></h1>
                         <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
         
                             <h2 class="text-2xl font-bold tracking-tight text-gray-900">Shoes</h2>
@@ -807,48 +811,62 @@
         </main>
 
         <footer  >
-            <div class="mx-auto max-w-2xl px-4 pb-5 pt-3.5 sm:px-6 sm:py-15 lg:max-w-7xl lg:px-8 ">
-                    <h1 class=" ml-15  text-4xl font-bold tracking-tight text-gray-900""><section id="about">About Us</section></h1>
-                    <h3 class="mb-3 ml-20 pt-5  text-xl font-bold tracking-tight text-gray-900">CONTACT US ON</h3>
-                    
-                    <span  class="ml-20 pt-2">
-                        <span class="mx-3 hover:scale-110 transition duration-500">
-                            <a href="https://www.facebook.com/markjordan.javier" title="Mark Jordan Javier">
-                            <i class="fa-brands fa-facebook fa-2x"></i>
-                            </a>
-                        </span>
-                        <span class="mx-3 hover:scale-110 transition duration-500">
-                            <a href="https://www.instagram.com/imnot_dannnnn/" title="imnot_dannnnn">
-                            <i class="fa-brands fa-instagram fa-2x"></i>
-                            </a>
-                        </span>
-                        <span class="mx-3 hover:scale-110 transition duration-500">
-                            <a href="https://github.com/Jordaks" title="Jordaks">
-                            <i class="fa-brands fa-github fa-2x"></i>
-                            </a>
-                        </span>
-                        <span class="ml-2 mr-5 hover:scale-110 transition duration-500">
-                            <a href="https://www.linkedin.com/in/mark-jordan-javier-0b1b3b1b3/" title="Mark Jordan Javier">
-                            <i class="fa-brands fa-linkedin fa-2x"></i>
-                            </a>
-                        </span>
-                        <span class=" hover:scale-110 transition duration-500">
-                            <a href="mailto:javiermarkjorda@gmail.com">
-                            <i class="fa-solid fa-envelope  fa-2x"></i>
-                            </a>
-                        </span>
-                    </span>
+                    <div class="grid grid-cols-3 gap-4 p-6">
+                        <div>
+                            <h5 class="mr-20 ml-40 text-l font-bold tracking-tight text-gray-900"><section id="about">ABOUT THRIFT SHOP</section></h5>
+                        </div>
 
-                    <h3 class=" ml-20 pt-5  text-xl font-bold tracking-tight text-gray-900 ">Info:</h3>
-            </div>
+                        <div>
+                            <h5 class=" ml-30 text-l text-center font-bold tracking-tight text-gray-900">CUSTOMER SERVICE</h5>
+                        </div>
+
+
+                        <div class="">
+                            <h5 class=" text-center text-l font-bold tracking-tight text-gray-900">CONTACT US ON</h5>
+                            <br>
+                            <span class="ml-44 mb-20 hover:scale-110 transition duration-500"  >
+                                <a href="https://www.facebook.com/markjordan.javier" title="Mark Jordan Javier">
+                                <i class="fa-brands fa-facebook fa-1x"></i> Facebook
+                                </a>
+                            </span>
+                            <br>
+                            <span class="ml-44 mb-20 mx-3  hover:scale-110 transition duration-500">
+                                <a href="https://www.instagram.com/imnot_dannnnn/" title="imnot_dannnnn">
+                                <i class="fa-brands fa-instagram fa-1x"></i> Instagram
+                                </a>
+                            </span>
+                            <br>
+                            <span class="ml-44 mb-20 mx-3  hover:scale-110 transition duration-500">
+                                <a href="https://www.tiktok.com/@jordamnnnn " title="Jordaks">
+                                <i class="fa-brands fa-tiktok"></i> Tiktok
+                                </a>
+                            </span>
+                            <br>
+                            <span class="ml-44 mb-20 mx-3 hover:scale-110 transition duration-500">
+                                <a href="https://www.linkedin.com/in/mark-jordan-javier-0b1b3b1b3/" title="Mark Jordan Javier">
+                                <i class="fa-brands fa-linkedin fa-1x"></i> LinkedIn
+                                </a>
+                            </span>
+                            <br>
+                            <span class="ml-44 mb-20 mx-3  hover:scale-110 transition duration-500">
+                                <a href="mailto:javiermarkjorda@gmail.com" title="javiermarkjordan">
+                                <i class="fa-solid fa-envelope  fa-1x"></i> Email
+                                </a>
+                            </span>
+                        </div>
+                        
+
+                    </div>
+                    
             <div class="mt-auto bg-gray-800 text-white text-center py-4">
                 &copy; 2025 RETHRY. All Rights Reserved. |
                 <a href="#" class="text-yellow-400 hover:underline mx-2">Terms of Service</a> |
                 <a href="#" class="text-yellow-400 hover:underline mx-2">FAQs</a> |
                 <a href="#" class="text-yellow-400 hover:underline mx-2">Privacy & Policy</a> |
+                <a href="#" class="text-yellow-400 hover:underline mx-2">Philippines</a> |
             </div>
             
         </footer>
-
+        <script src="index.js"></script>
 </body>
 </html>
