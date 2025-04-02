@@ -40,7 +40,7 @@
                                             <path fill-rule="evenodd" d="M7.5 6v.75H5.513c-.96 0-1.764.724-1.865 1.679l-1.263 12A1.875 1.875 0 0 0 4.25 22.5h15.5a1.875 1.875 0 0 0 1.865-2.071l-1.263-12a1.875 1.875 0 0 0-1.865-1.679H16.5V6a4.5 4.5 0 1 0-9 0ZM12 3a3 3 0 0 0-3 3v.75h6V6a3 3 0 0 0-3-3Zm-3 8.25a3 3 0 1 0 6 0v-.75a.75.75 0 0 1 1.5 0v.75a4.5 4.5 0 1 1-9 0v-.75a.75.75 0 0 1 1.5 0v.75Z" clip-rule="evenodd" />
                                         </svg>
                                         
-                                        <p id="count" class="bg-red-500 text-white text-xs rounded-full flex items-center justify-center absolute top-7 left-[79%] px-1 py-[2px]">0</p>
+                                        <p id="cart-count" class="bg-red-500 text-white text-xs rounded-full flex items-center justify-center absolute top-7 left-[79%] px-1 py-[2px]">0</p>
                                     </span>
                             </button>
 
@@ -78,727 +78,598 @@
 
         <main  >
             <div class="bg-orange-50">
-                <h1 class=" ml-20 pt-5 text-4xl font-bold tracking-tight text-gray-900""><section id="t-shirt">Latest Thrift</section></h1>
+                <h1 class="ml-24 pt-5 text-4xl pl-2 font-bold tracking-tight text-gray-900"><section id="t-shirt">Latest Thrift</section></h1>
                 <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+
+
+                    <!--
+                        
+                    SHOES
+                        
+                    -->
+
+
                     <h2 class="text-2xl font-bold tracking-tight text-gray-900">T-shirt</h2>
                     <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
                         <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
                             <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" 
                                 alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
-                            <div class="mt-4 flex justify-between">
-                                <div>
-                                    <h3 class="text-sm text-gray-700 product-title">Carhartt</h3>
-                                    <p class="mt-1 text-sm text-gray-500 product-color">Black</p>
-                                    <p class="mt-1 text-sm text-gray-500 product-size">Medium</p>
-                                    <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱449</p>
-                                </div>
+                            <div class="mt-4 flex justify-between mr-4">
+                                <div class="ml-4">
+                                    <h3 class="text-sm font-bold text-gray-700 product-title">Carhartt</h3>
+                                    <p class="mt-1 text-sm text-black product-color">Black</p> 
+                                    </div>
+                                    <div class="">
+                                        <p class=" text-sm text-gray-500 product-size">Medium</p>
+                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱449</p>
+                                    </div>
                             </div>
-                            <button onclick="increment()" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-400 w-full add-to-cart">
-                                Add To Cart
+                            <button onclick="increment()" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart">
+                                <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                                </svg>
+                                <span class="ml-8 absolute-flex items-center justify-center text-sm font-bold text-wjhite">
+                                    Add To Cart
+                                </span>
                             </button>
                         </div>
                         
-                            <div class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4">
-                                    <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="aspect-square w-full rounded-2xl bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
-                                        <div class="mt-4 flex justify-between mr-4">
-                                            <div class="ml-4">
-                                                <h3 class="text-sm text-gray-700">
-                                                    Carhartt
-                                                </h3>
-                                                        
-                                                <p class="mt-1 text-sm text-gray-500">Black</p>
-                                                </div>
-                                                <div class="ml-4">
-                                                    <p class="mt-1 text-sm text-gray-500">Medium</p>
-                                                    <p class="mt-1 text-sm text-gray-500">₱449</p>
-                                                </div>
-                                        </div>
-                                        <div class="hover:scale-105 transition duration-150  hover:text-gray-300">
-                                            <div class="m-4 border-2 border-orange-200 bg-orange-200 rounded-2xl hover:bg-orange-100  transition duration-100 hover:shadow-2xl">
-                                                <button onclick="increment()" class=" text-black font-bold py-2 pl-12 rounded-4xl">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7 absolute">
-                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                                    </svg>
-                                                    <span class="ml-8 absolute-flex items-center justify-center text-sm font-bold text-gray-900">
-                                                        Add To Cart
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                </div>
+                        <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                            <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" 
+                                alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
+                            <div class="mt-4 flex justify-between mr-4">
+                                <div class="ml-4">
+                                    <h3 class="text-sm font-bold text-gray-700 product-title">Carhartt</h3>
+                                    <p class="mt-1 text-sm text-black  product-color">Black</p> 
+                                    </div>
+                                    <div class="">
+                                        <p class=" text-sm text-gray-500 product-size">Medium</p>
+                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱449</p>
+                                    </div>
+                            </div>
+                            <button onclick="increment()" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart">
+                                <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                                </svg>
+                                <span class="ml-8 absolute-flex items-center justify-center text-sm font-bold text-wjhite">
+                                    Add To Cart
+                                </span>
+                            </button>
+                        </div>
                                 
-                                <div class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4">
-                                    <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="aspect-square w-full rounded-2xl bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
-                                        <div class="mt-4 flex justify-between mr-4">
-                                            <div class="ml-4">
-                                                <h3 class="text-sm text-gray-700">
-                                                    Carhartt
-                                                </h3>
-                                                        
-                                                <p class="mt-1 text-sm text-gray-500">Black</p>
-                                                </div>
-                                                <div class="ml-4">
-                                                    <p class="mt-1 text-sm text-gray-500">Medium</p>
-                                                    <p class="mt-1 text-sm text-gray-500">₱449</p>
-                                                </div>
-                                        </div>
-                                        <div class="hover:scale-105 transition duration-150  hover:text-gray-300">
-                                            <div class="m-4 border-2 border-orange-200 bg-orange-200 rounded-2xl hover:bg-orange-100  transition duration-100 hover:shadow-2xl">
-                                                <button onclick="increment()" class=" text-black font-bold py-2 pl-12 rounded-4xl">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7 absolute">
-                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                                    </svg>
-                                                    <span class="ml-8 absolute-flex items-center justify-center text-sm font-bold text-gray-900">
-                                                        Add To Cart
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                </div>
-                        
-                                <div class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4">
-                                    <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="aspect-square w-full rounded-2xl bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
-                                        <div class="mt-4 flex justify-between mr-4">
-                                            <div class="ml-4">
-                                                <h3 class="text-sm text-gray-700">
-                                                    Carhartt
-                                                </h3>
-                                                        
-                                                <p class="mt-1 text-sm text-gray-500">Black</p>
-                                                </div>
-                                                <div class="ml-4">
-                                                    <p class="mt-1 text-sm text-gray-500">Medium</p>
-                                                    <p class="mt-1 text-sm text-gray-500">₱449</p>
-                                                </div>
-                                        </div>
-                                        <div class="hover:scale-105 transition duration-150  hover:text-gray-300">
-                                            <div class="m-4 border-2 border-orange-200 bg-orange-200 rounded-2xl hover:bg-orange-100  transition duration-100 hover:shadow-2xl">
-                                                <button onclick="increment()" class=" text-black font-bold py-2 pl-12 rounded-4xl">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7 absolute">
-                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                                    </svg>
-                                                    <span class="ml-8 absolute-flex items-center justify-center text-sm font-bold text-gray-900">
-                                                        Add To Cart
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                </div>
-
-                            <div class="hover:scale-100 transition duration-250  bg-white hover:shadow-2xl border-2 border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4">
-                                    <div class="group relative">
-                                            <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="aspect-square w-full rounded-2xl bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
-                                        
-                                            <div class="mt-4 flex justify-between mr-4">
-                                                    <div class="ml-4">
-                                                        <h3 class="text-sm text-gray-700">
-                                                            <a href="#">
-                                                            <span aria-hidden="true" class="absolute inset-0"></span>
-                                                            Basic Tee
-                                                            </a>
-                                                        </h3>
-                                                        <p class="mt-1 text-sm text-gray-500">Black</p>
-                                                        <p class="mt-1 text-sm text-gray-500">Medium</p>
-                                                    </div>
-                                                    <span>
-                                                        <p class="text-sm font-medium text-gray-900">₱449</p>
-                                                    <span>
-                                                    <button type="button">
-                                                        <span class="mr-2">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-9">
-                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                                            </svg>
-                                                        </span>
-                                                    </button>
-                                            </div>
+                        <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                            <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" 
+                                alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
+                            <div class="mt-4 flex justify-between mr-4">
+                                <div class="ml-4">
+                                    <h3 class="text-sm font-bold text-gray-700 product-title">Carhartt</h3>
+                                    <p class="mt-1 text-sm text-black  product-color">Black</p> 
                                     </div>
-                                </div>
-
-                                <div class="hover:scale-100 transition duration-250 hover:shadow-2xl  bg-white border-2 border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4">
-                                    <div class="group relative">
-                                            <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="aspect-square w-full rounded-2xl bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
-                                        
-                                            <div class="mt-4 flex justify-between mr-4">
-                                                    <div class="ml-4">
-                                                        <h3 class="text-sm text-gray-700">
-                                                            <a href="#">
-                                                            <span aria-hidden="true" class="absolute inset-0"></span>
-                                                            Basic Tee
-                                                            </a>
-                                                        </h3>
-                                                        <p class="mt-1 text-sm text-gray-500">Black</p>
-                                                        <p class="mt-1 text-sm text-gray-500">Medium</p>
-                                                    </div>
-                                                    <span>
-                                                        <p class="text-sm font-medium text-gray-900">₱449</p>
-                                                    <span>
-                                                    <button type="button">
-                                                        <span class="mr-2">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-9">
-                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                                            </svg>
-                                                        </span>
-                                                    </button>
-                                            </div>
+                                    <div class="">
+                                        <p class=" text-sm text-gray-500 product-size">Medium</p>
+                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱449</p>
                                     </div>
-                                </div>
-
-                                <div class="hover:scale-100 transition duration-250  bg-white hover:shadow-2xl border-2 border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4">
-                                    <div class="group relative">
-                                            <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="aspect-square w-full rounded-2xl bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
-                                        
-                                            <div class="mt-4 flex justify-between mr-4">
-                                                    <div class="ml-4">
-                                                        <h3 class="text-sm text-gray-700">
-                                                            <a href="#">
-                                                            <span aria-hidden="true" class="absolute inset-0"></span>
-                                                            Basic Tee
-                                                            </a>
-                                                        </h3>
-                                                        <p class="mt-1 text-sm text-gray-500">Black</p>
-                                                        <p class="mt-1 text-sm text-gray-500">Medium</p>
-                                                    </div>
-                                                    <span>
-                                                        <p class="text-sm font-medium text-gray-900">₱449</p>
-                                                    <span>
-                                                    <button type="button">
-                                                        <span class="mr-2">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-9">
-                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                                            </svg>
-                                                        </span>
-                                                    </button>
-                                            </div>
-                                    </div>
-                                </div>
-
-                            <div class="hover:scale-100 transition duration-250 hover:shadow-2xl  bg-white border-2 border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4">
-                                    <div class="group relative">
-                                            <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="aspect-square w-full rounded-2xl bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
-                                        
-                                            <div class="mt-4 flex justify-between mr-4">
-                                                    <div class="ml-4">
-                                                        <h3 class="text-sm text-gray-700">
-                                                            <a href="#">
-                                                            <span aria-hidden="true" class="absolute inset-0"></span>
-                                                            Basic Tee
-                                                            </a>
-                                                        </h3>
-                                                        <p class="mt-1 text-sm text-gray-500">Black</p>
-                                                        <p class="mt-1 text-sm text-gray-500">Medium</p>
-                                                    </div>
-                                                    <span>
-                                                        <p class="text-sm font-medium text-gray-900">₱449</p>
-                                                    <span>
-                                                    <button type="button">
-                                                        <span class="mr-2">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-9">
-                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                                            </svg>
-                                                        </span>
-                                                    </button>
-                                            </div>
-                                    </div>
-                                </div>
-                            
-                                
-                    </div>
-                    
-                    
-                    
-                </div>
-                
-                <div class="bg-orange-50">
-                    <h1 class=" ml-20 pt-5 text-4xl font-bold tracking-tight text-gray-900""><section id="shorts">Latest Thrift</section></h1>
-                    <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-    
-                        <h2 class="text-2xl font-bold tracking-tight text-gray-900">Shorts</h2>
-                        <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-                                <div class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4">
-                                    <div class="group relative">
-                                            <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="aspect-square w-full rounded-2xl bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
-                                            <div class="mt-4 flex justify-between mr-4">
-                                                    <div class="ml-4">
-                                                        <h3 class="text-sm text-gray-700">
-                                                            <a href="#">
-                                                            <span aria-hidden="true" class="absolute inset-0"></span>
-                                                            Basic Tee
-                                                            </a>
-                                                        </h3>
-                                                        <p class="mt-1 text-sm text-gray-500">Black</p>
-                                                        <p class="mt-1 text-sm text-gray-500">Medium</p>
-                                                    </div>
-                                                    <span>
-                                                        <p class="text-sm font-medium text-gray-900">₱449</p>
-                                                    <span>
-                                                    <button type="button">
-                                                        <span class="mr-2">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-9">
-                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                                            </svg>
-                                                        </span>
-                                                    </button>
-                                            </div>
-                                    </div>
-                                </div>
-                                    
-                            
-                                    <!-- More products... -->
-                                    <div class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2  bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4">
-                                        <div class="group relative">
-                                                <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="aspect-square w-full rounded-2xl bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
-                                            
-                                                <div class="mt-4 flex justify-between mr-4">
-                                                        <div class="ml-4">
-                                                            <h3 class="text-sm text-gray-700">
-                                                                <a href="#">
-                                                                <span aria-hidden="true" class="absolute inset-0"></span>
-                                                                Basic Tee
-                                                                </a>
-                                                            </h3>
-                                                            <p class="mt-1 text-sm text-gray-500">Black</p>
-                                                            <p class="mt-1 text-sm text-gray-500">Medium</p>
-                                                        </div>
-                                                        <span>
-                                                            <p class="text-sm font-medium text-gray-900">₱449</p>
-                                                        <span>
-                                                        <button type="button">
-                                                            <span class="mr-2">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-9">
-                                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                                                </svg>
-                                                            </span>
-                                                        </button>
-                                                </div>
-                                        </div>
-                                    </div>
-                                    
-                                    
-                                    <div class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2  bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4">
-                                        <div class="group relative">
-                                                <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="aspect-square w-full rounded-2xl bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
-                                            
-                                                <div class="mt-4 flex justify-between mr-4">
-                                                        <div class="ml-4">
-                                                            <h3 class="text-sm text-gray-700">
-                                                                <a href="#">
-                                                                <span aria-hidden="true" class="absolute inset-0"></span>
-                                                                Basic Tee
-                                                                </a>
-                                                            </h3>
-                                                            <p class="mt-1 text-sm text-gray-500">Black</p>
-                                                            <p class="mt-1 text-sm text-gray-500">Medium</p>
-                                                        </div>
-                                                        <span>
-                                                            <p class="text-sm font-medium text-gray-900">₱449</p>
-                                                        <span>
-                                                        <button type="button">
-                                                            <span class="mr-2">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-9">
-                                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                                                </svg>
-                                                            </span>
-                                                        </button>
-                                                </div>
-                                        </div>
-                                    </div>
-                            
-                                    <!-- More products... -->
-                                    <div class="hover:scale-100 transition duration-250  bg-white hover:shadow-2xl border-2 border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4">
-                                        <div class="group relative">
-                                                <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="aspect-square w-full rounded-2xl bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
-                                            
-                                                <div class="mt-4 flex justify-between mr-4">
-                                                        <div class="ml-4">
-                                                            <h3 class="text-sm text-gray-700">
-                                                                <a href="#">
-                                                                <span aria-hidden="true" class="absolute inset-0"></span>
-                                                                Basic Tee
-                                                                </a>
-                                                            </h3>
-                                                            <p class="mt-1 text-sm text-gray-500">Black</p>
-                                                            <p class="mt-1 text-sm text-gray-500">Medium</p>
-                                                        </div>
-                                                        <span>
-                                                            <p class="text-sm font-medium text-gray-900">₱449</p>
-                                                        <span>
-                                                        <button type="button">
-                                                            <span class="mr-2">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-9">
-                                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                                                </svg>
-                                                            </span>
-                                                        </button>
-                                                </div>
-                                        </div>
-                                    </div>
-    
-                                <div class="hover:scale-100 transition duration-250  bg-white hover:shadow-2xl border-2 border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4">
-                                        <div class="group relative">
-                                                <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="aspect-square w-full rounded-2xl bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
-                                            
-                                                <div class="mt-4 flex justify-between mr-4">
-                                                        <div class="ml-4">
-                                                            <h3 class="text-sm text-gray-700">
-                                                                <a href="#">
-                                                                <span aria-hidden="true" class="absolute inset-0"></span>
-                                                                Basic Tee
-                                                                </a>
-                                                            </h3>
-                                                            <p class="mt-1 text-sm text-gray-500">Black</p>
-                                                            <p class="mt-1 text-sm text-gray-500">Medium</p>
-                                                        </div>
-                                                        <span>
-                                                            <p class="text-sm font-medium text-gray-900">₱449</p>
-                                                        <span>
-                                                        <button type="button">
-                                                            <span class="mr-2">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-9">
-                                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                                                </svg>
-                                                            </span>
-                                                        </button>
-                                                </div>
-                                        </div>
-                                    </div>
-    
-                                    <div class="hover:scale-100 transition duration-250 hover:shadow-2xl  bg-white border-2 border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4">
-                                        <div class="group relative">
-                                                <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="aspect-square w-full rounded-2xl bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
-                                            
-                                                <div class="mt-4 flex justify-between mr-4">
-                                                        <div class="ml-4">
-                                                            <h3 class="text-sm text-gray-700">
-                                                                <a href="#">
-                                                                <span aria-hidden="true" class="absolute inset-0"></span>
-                                                                Basic Tee
-                                                                </a>
-                                                            </h3>
-                                                            <p class="mt-1 text-sm text-gray-500">Black</p>
-                                                            <p class="mt-1 text-sm text-gray-500">Medium</p>
-                                                        </div>
-                                                        <span>
-                                                            <p class="text-sm font-medium text-gray-900">₱449</p>
-                                                        <span>
-                                                        <button type="button">
-                                                            <span class="mr-2">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-9">
-                                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                                                </svg>
-                                                            </span>
-                                                        </button>
-                                                </div>
-                                        </div>
-                                    </div>
-    
-                                    <div class="hover:scale-100 transition duration-250  bg-white hover:shadow-2xl border-2 border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4">
-                                        <div class="group relative">
-                                                <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="aspect-square w-full rounded-2xl bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
-                                            
-                                                <div class="mt-4 flex justify-between mr-4">
-                                                        <div class="ml-4">
-                                                            <h3 class="text-sm text-gray-700">
-                                                                <a href="#">
-                                                                <span aria-hidden="true" class="absolute inset-0"></span>
-                                                                Basic Tee
-                                                                </a>
-                                                            </h3>
-                                                            <p class="mt-1 text-sm text-gray-500">Black</p>
-                                                            <p class="mt-1 text-sm text-gray-500">Medium</p>
-                                                        </div>
-                                                        <span>
-                                                            <p class="text-sm font-medium text-gray-900">₱449</p>
-                                                        <span>
-                                                        <button type="button">
-                                                            <span class="mr-2">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-9">
-                                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                                                </svg>
-                                                            </span>
-                                                        </button>
-                                                </div>
-                                        </div>
-                                    </div>
-    
-                                <div class="hover:scale-100 transition duration-250 hover:shadow-2xl  bg-white border-2 border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4">
-                                        <div class="group relative">
-                                                <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="aspect-square w-full rounded-2xl bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
-                                            
-                                                <div class="mt-4 flex justify-between mr-4">
-                                                        <div class="ml-4">
-                                                            <h3 class="text-sm text-gray-700">
-                                                                <a href="#">
-                                                                <span aria-hidden="true" class="absolute inset-0"></span>
-                                                                Basic Tee
-                                                                </a>
-                                                            </h3>
-                                                            <p class="mt-1 text-sm text-gray-500">Black</p>
-                                                            <p class="mt-1 text-sm text-gray-500">Medium</p>
-                                                        </div>
-                                                        <span>
-                                                            <p class="text-sm font-medium text-gray-900">₱449</p>
-                                                        <span>
-                                                        <button type="button">
-                                                            <span class="mr-2">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-9">
-                                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                                                </svg>
-                                                            </span>
-                                                        </button>
-                                                </div>
-                                        </div>
-                                    </div>
-                                
-                                    
+                            </div>
+                            <button onclick="increment()" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart">
+                                <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                                </svg>
+                                <span class="ml-8 absolute-flex items-center justify-center text-sm font-bold text-wjhite">
+                                    Add To Cart
+                                </span>
+                            </button>
                         </div>
                         
+                        <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                            <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" 
+                                alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
+                            <div class="mt-4 flex justify-between mr-4">
+                                <div class="ml-4">
+                                    <h3 class="text-sm font-bold text-gray-700 product-title">Carhartt</h3>
+                                    <p class="mt-1 text-sm text-black  product-color">Black</p> 
+                                    </div>
+                                    <div class="">
+                                        <p class=" text-sm text-gray-500 product-size">Medium</p>
+                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱449</p>
+                                    </div>
+                            </div>
+                            <button onclick="increment()" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart">
+                                <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                                </svg>
+                                <span class="ml-8 absolute-flex items-center justify-center text-sm font-bold text-wjhite">
+                                    Add To Cart
+                                </span>
+                            </button>
+                        </div>
+
+                        <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                            <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" 
+                                alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
+                            <div class="mt-4 flex justify-between mr-4">
+                                <div class="ml-4">
+                                    <h3 class="text-sm font-bold text-gray-700 product-title">Carhartt</h3>
+                                    <p class="mt-1 text-sm text-black product-color">Black</p> 
+                                    </div>
+                                    <div class="">
+                                        <p class=" text-sm text-gray-500 product-size">Medium</p>
+                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱449</p>
+                                    </div>
+                            </div>
+                            <button onclick="increment()" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart">
+                                <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                                </svg>
+                                <span class="ml-8 absolute-flex items-center justify-center text-sm font-bold text-wjhite">
+                                    Add To Cart
+                                </span>
+                            </button>
+                        </div>
                         
+                        <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                            <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" 
+                                alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
+                            <div class="mt-4 flex justify-between mr-4">
+                                <div class="ml-4">
+                                    <h3 class="text-sm font-bold text-gray-700 product-title">Carhartt</h3>
+                                    <p class="mt-1 text-sm text-black  product-color">Black</p> 
+                                    </div>
+                                    <div class="">
+                                        <p class=" text-sm text-gray-500 product-size">Medium</p>
+                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱449</p>
+                                    </div>
+                            </div>
+                            <button onclick="increment()" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart">
+                                <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                                </svg>
+                                <span class="ml-8 absolute-flex items-center justify-center text-sm font-bold text-wjhite">
+                                    Add To Cart
+                                </span>
+                            </button>
+                        </div>
+                                
+                        <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                            <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" 
+                                alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
+                            <div class="mt-4 flex justify-between mr-4">
+                                <div class="ml-4">
+                                    <h3 class="text-sm font-bold text-gray-700 product-title">Carhartt</h3>
+                                    <p class="mt-1 text-sm text-black  product-color">Black</p> 
+                                    </div>
+                                    <div class="">
+                                        <p class=" text-sm text-gray-500 product-size">Medium</p>
+                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱449</p>
+                                    </div>
+                            </div>
+                            <button onclick="increment()" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart">
+                                <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                                </svg>
+                                <span class="ml-8 absolute-flex items-center justify-center text-sm font-bold text-wjhite">
+                                    Add To Cart
+                                </span>
+                            </button>
+                        </div>
                         
+                        <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                            <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" 
+                                alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
+                            <div class="mt-4 flex justify-between mr-4">
+                                <div class="ml-4">
+                                    <h3 class="text-sm font-bold text-gray-700 product-title">Carhartt</h3>
+                                    <p class="mt-1 text-sm text-black  product-color">Black</p> 
+                                    </div>
+                                    <div class="">
+                                        <p class=" text-sm text-gray-500 product-size">Medium</p>
+                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱449</p>
+                                    </div>
+                            </div>
+                            <button onclick="increment()" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart">
+                                <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                                </svg>
+                                <span class="ml-8 absolute-flex items-center justify-center text-sm font-bold text-wjhite">
+                                    Add To Cart
+                                </span>
+                            </button>
+                        </div>
                     </div>
                 
-                    <div class="bg-orange-50">
-                        <h3 class=" ml-20 pt-5 text-4xl font-bold tracking-tight text-gray-900""><section id="shoes">Latest Thrift</section></h1>
-                        <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-        
-                            <h2 class="text-2xl font-bold tracking-tight text-gray-900">Shoes</h2>
-                            <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-                                    <div class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4">
-                                        <div class="group relative">
-                                                <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="aspect-square w-full rounded-2xl bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
-                                                <div class="mt-4 flex justify-between mr-4">
-                                                        <div class="ml-4">
-                                                            <h3 class="text-sm text-gray-700">
-                                                                <a href="#">
-                                                                <span aria-hidden="true" class="absolute inset-0"></span>
-                                                                Basic Tee
-                                                                </a>
-                                                            </h3>
-                                                            <p class="mt-1 text-sm text-gray-500">Black</p>
-                                                            <p class="mt-1 text-sm text-gray-500">Medium</p>
-                                                        </div>
-                                                        <span>
-                                                            <p class="text-sm font-medium text-gray-900">₱449</p>
-                                                        <span>
-                                                        <button type="button">
-                                                            <span class="mr-2">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-9">
-                                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                                                </svg>
-                                                            </span>
-                                                        </button>
-                                                </div>
+
+                <!--
+                    
+                SHORTS
+                    
+                -->
+                    
+
+                    <h1 class=" pt-5 pb-24 text-4xl font-bold tracking-tight text-gray-900"><section id="shorts">Latest Thrift</section></h1>
+                    <h2 class="text-2xl font-bold tracking-tight text-gray-900">Shorts</h2>
+                        <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+                            <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                                <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" 
+                                    alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
+                                <div class="mt-4 flex justify-between mr-4">
+                                    <div class="ml-4">
+                                        <h3 class="text-sm font-bold text-gray-700 product-title">Carhartt</h3>
+                                        <p class="mt-1 text-sm text-black product-color">Black</p> 
                                         </div>
-                                    </div>
-                                        
-                                
-                                        <!-- More products... -->
-                                        <div class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2  bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4">
-                                            <div class="group relative">
-                                                    <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="aspect-square w-full rounded-2xl bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
-                                                
-                                                    <div class="mt-4 flex justify-between mr-4">
-                                                            <div class="ml-4">
-                                                                <h3 class="text-sm text-gray-700">
-                                                                    <a href="#">
-                                                                    <span aria-hidden="true" class="absolute inset-0"></span>
-                                                                    Basic Tee
-                                                                    </a>
-                                                                </h3>
-                                                                <p class="mt-1 text-sm text-gray-500">Black</p>
-                                                                <p class="mt-1 text-sm text-gray-500">Medium</p>
-                                                            </div>
-                                                            <span>
-                                                                <p class="text-sm font-medium text-gray-900">₱449</p>
-                                                            <span>
-                                                            <button type="button">
-                                                                <span class="mr-2">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-9">
-                                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                                                    </svg>
-                                                                </span>
-                                                            </button>
-                                                    </div>
-                                            </div>
+                                        <div class="">
+                                            <p class=" text-sm text-gray-500 product-size">Medium</p>
+                                            <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱449</p>
                                         </div>
-                                        
-                                        
-                                        <div class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2  bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4">
-                                            <div class="group relative">
-                                                    <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="aspect-square w-full rounded-2xl bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
-                                                
-                                                    <div class="mt-4 flex justify-between mr-4">
-                                                            <div class="ml-4">
-                                                                <h3 class="text-sm text-gray-700">
-                                                                    <a href="#">
-                                                                    <span aria-hidden="true" class="absolute inset-0"></span>
-                                                                    Basic Tee
-                                                                    </a>
-                                                                </h3>
-                                                                <p class="mt-1 text-sm text-gray-500">Black</p>
-                                                                <p class="mt-1 text-sm text-gray-500">Medium</p>
-                                                            </div>
-                                                            <span>
-                                                                <p class="text-sm font-medium text-gray-900">₱449</p>
-                                                            <span>
-                                                            <button type="button">
-                                                                <span class="mr-2">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-9">
-                                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                                                    </svg>
-                                                                </span>
-                                                            </button>
-                                                    </div>
-                                            </div>
+                                </div>
+                                <button onclick="increment()" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart">
+                                    <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                                    </svg>
+                                    <span class="ml-8 absolute-flex items-center justify-center text-sm font-bold text-wjhite">
+                                        Add To Cart
+                                    </span>
+                                </button>
+                            </div>
+                            
+                            <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                                <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" 
+                                    alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
+                                <div class="mt-4 flex justify-between mr-4">
+                                    <div class="ml-4">
+                                        <h3 class="text-sm font-bold text-gray-700 product-title">Carhartt</h3>
+                                        <p class="mt-1 text-sm text-black  product-color">Black</p> 
                                         </div>
-                                
-                                        <!-- More products... -->
-                                        <div class="hover:scale-100 transition duration-250  bg-white hover:shadow-2xl border-2 border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4">
-                                            <div class="group relative">
-                                                    <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="aspect-square w-full rounded-2xl bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
-                                                
-                                                    <div class="mt-4 flex justify-between mr-4">
-                                                            <div class="ml-4">
-                                                                <h3 class="text-sm text-gray-700">
-                                                                    <a href="#">
-                                                                    <span aria-hidden="true" class="absolute inset-0"></span>
-                                                                    Basic Tee
-                                                                    </a>
-                                                                </h3>
-                                                                <p class="mt-1 text-sm text-gray-500">Black</p>
-                                                                <p class="mt-1 text-sm text-gray-500">Medium</p>
-                                                            </div>
-                                                            <span>
-                                                                <p class="text-sm font-medium text-gray-900">₱449</p>
-                                                            <span>
-                                                            <button type="button">
-                                                                <span class="mr-2">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-9">
-                                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                                                    </svg>
-                                                                </span>
-                                                            </button>
-                                                    </div>
-                                            </div>
+                                        <div class="">
+                                            <p class=" text-sm text-gray-500 product-size">Medium</p>
+                                            <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱449</p>
                                         </div>
-        
-                                    <div class="hover:scale-100 transition duration-250  bg-white hover:shadow-2xl border-2 border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4">
-                                            <div class="group relative">
-                                                    <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="aspect-square w-full rounded-2xl bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
-                                                
-                                                    <div class="mt-4 flex justify-between mr-4">
-                                                            <div class="ml-4">
-                                                                <h3 class="text-sm text-gray-700">
-                                                                    <a href="#">
-                                                                    <span aria-hidden="true" class="absolute inset-0"></span>
-                                                                    Basic Tee
-                                                                    </a>
-                                                                </h3>
-                                                                <p class="mt-1 text-sm text-gray-500">Black</p>
-                                                                <p class="mt-1 text-sm text-gray-500">Medium</p>
-                                                            </div>
-                                                            <span>
-                                                                <p class="text-sm font-medium text-gray-900">₱449</p>
-                                                            <span>
-                                                            <button type="button">
-                                                                <span class="mr-2">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-9">
-                                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                                                    </svg>
-                                                                </span>
-                                                            </button>
-                                                    </div>
-                                            </div>
+                                </div>
+                                <button onclick="increment()" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart">
+                                    <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                                    </svg>
+                                    <span class="ml-8 absolute-flex items-center justify-center text-sm font-bold text-wjhite">
+                                        Add To Cart
+                                    </span>
+                                </button>
+                            </div>
+                                    
+                            <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                                <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" 
+                                    alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
+                                <div class="mt-4 flex justify-between mr-4">
+                                    <div class="ml-4">
+                                        <h3 class="text-sm font-bold text-gray-700 product-title">Carhartt</h3>
+                                        <p class="mt-1 text-sm text-black  product-color">Black</p> 
                                         </div>
-        
-                                        <div class="hover:scale-100 transition duration-250 hover:shadow-2xl  bg-white border-2 border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4">
-                                            <div class="group relative">
-                                                    <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="aspect-square w-full rounded-2xl bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
-                                                
-                                                    <div class="mt-4 flex justify-between mr-4">
-                                                            <div class="ml-4">
-                                                                <h3 class="text-sm text-gray-700">
-                                                                    <a href="#">
-                                                                    <span aria-hidden="true" class="absolute inset-0"></span>
-                                                                    Basic Tee
-                                                                    </a>
-                                                                </h3>
-                                                                <p class="mt-1 text-sm text-gray-500">Black</p>
-                                                                <p class="mt-1 text-sm text-gray-500">Medium</p>
-                                                            </div>
-                                                            <span>
-                                                                <p class="text-sm font-medium text-gray-900">₱449</p>
-                                                            <span>
-                                                            <button type="button">
-                                                                <span class="mr-2">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-9">
-                                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                                                    </svg>
-                                                                </span>
-                                                            </button>
-                                                    </div>
-                                            </div>
+                                        <div class="">
+                                            <p class=" text-sm text-gray-500 product-size">Medium</p>
+                                            <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱449</p>
                                         </div>
-        
-                                        <div class="hover:scale-100 transition duration-250  bg-white hover:shadow-2xl border-2 border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4">
-                                            <div class="group relative">
-                                                    <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="aspect-square w-full rounded-2xl bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
-                                                    <div class="mt-4 flex justify-between mr-4">
-                                                            <div class="ml-4">
-                                                                <h3 class="text-sm text-gray-700">
-                                                                    <a href="#">
-                                                                    <span aria-hidden="true" class="absolute inset-0"></span>
-                                                                    Basic Tee
-                                                                    </a>
-                                                                </h3>
-                                                                <p class="mt-1 text-sm text-gray-500">Black</p>
-                                                                <p class="mt-1 text-sm text-gray-500">Medium</p>
-                                                            </div>
-                                                            <span>
-                                                                <p class="text-sm font-medium text-gray-900">₱449</p>
-                                                            <span>
-                                                            <button type="button">
-                                                                <span class="mr-2">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-9">
-                                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                                                    </svg>
-                                                                </span>
-                                                            </button>
-                                                    </div>
-                                            </div>
+                                </div>
+                                <button onclick="increment()" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart">
+                                    <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                                    </svg>
+                                    <span class="ml-8 absolute-flex items-center justify-center text-sm font-bold text-wjhite">
+                                        Add To Cart
+                                    </span>
+                                </button>
+                            </div>
+                            
+                            <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                                <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" 
+                                    alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
+                                <div class="mt-4 flex justify-between mr-4">
+                                    <div class="ml-4">
+                                        <h3 class="text-sm font-bold text-gray-700 product-title">Carhartt</h3>
+                                        <p class="mt-1 text-sm text-black  product-color">Black</p> 
                                         </div>
-        
-                                    <div class="hover:scale-100 transition duration-250 hover:shadow-2xl  bg-white border-2 border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4">
-                                            <div class="group relative">
-                                                    <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="aspect-square w-full rounded-2xl bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
-                                                
-                                                    <div class="mt-4 flex justify-between mr-4">
-                                                            <div class="ml-4">
-                                                                <h3 class="text-sm text-gray-700">
-                                                                    <a href="#">
-                                                                    <span aria-hidden="true" class="absolute inset-0"></span>
-                                                                    Basic Tee
-                                                                    </a>
-                                                                </h3>
-                                                                <p class="mt-1 text-sm text-gray-500">Black</p>
-                                                                <p class="mt-1 text-sm text-gray-500">Medium</p>
-                                                            </div>
-                                                            <span>
-                                                                <p class="text-sm font-medium text-gray-900">₱449</p>
-                                                            <span>
-                                                            <button type="button">
-                                                                <span class="mr-2">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-9">
-                                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                                                    </svg>
-                                                                </span>
-                                                            </button>
-                                                    </div>
-                                            </div>
+                                        <div class="">
+                                            <p class=" text-sm text-gray-500 product-size">Medium</p>
+                                            <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱449</p>
                                         </div>
+                                </div>
+                                <button onclick="increment()" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart">
+                                    <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                                    </svg>
+                                    <span class="ml-8 absolute-flex items-center justify-center text-sm font-bold text-wjhite">
+                                        Add To Cart
+                                    </span>
+                                </button>
+                            </div>
+    
+                            <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                                <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" 
+                                    alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
+                                <div class="mt-4 flex justify-between mr-4">
+                                    <div class="ml-4">
+                                        <h3 class="text-sm font-bold text-gray-700 product-title">Carhartt</h3>
+                                        <p class="mt-1 text-sm text-black product-color">Black</p> 
+                                        </div>
+                                        <div class="">
+                                            <p class=" text-sm text-gray-500 product-size">Medium</p>
+                                            <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱449</p>
+                                        </div>
+                                </div>
+                                <button onclick="increment()" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart">
+                                    <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                                    </svg>
+                                    <span class="ml-8 absolute-flex items-center justify-center text-sm font-bold text-wjhite">
+                                        Add To Cart
+                                    </span>
+                                </button>
+                            </div>
+                            
+                            <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                                <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" 
+                                    alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
+                                <div class="mt-4 flex justify-between mr-4">
+                                    <div class="ml-4">
+                                        <h3 class="text-sm font-bold text-gray-700 product-title">Carhartt</h3>
+                                        <p class="mt-1 text-sm text-black  product-color">Black</p> 
+                                        </div>
+                                        <div class="">
+                                            <p class=" text-sm text-gray-500 product-size">Medium</p>
+                                            <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱449</p>
+                                        </div>
+                                </div>
+                                <button onclick="increment()" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart">
+                                    <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                                    </svg>
+                                    <span class="ml-8 absolute-flex items-center justify-center text-sm font-bold text-wjhite">
+                                        Add To Cart
+                                    </span>
+                                </button>
+                            </div>
+                                    
+                            <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                                <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" 
+                                    alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
+                                <div class="mt-4 flex justify-between mr-4">
+                                    <div class="ml-4">
+                                        <h3 class="text-sm font-bold text-gray-700 product-title">Carhartt</h3>
+                                        <p class="mt-1 text-sm text-black  product-color">Black</p> 
+                                        </div>
+                                        <div class="">
+                                            <p class=" text-sm text-gray-500 product-size">Medium</p>
+                                            <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱449</p>
+                                        </div>
+                                </div>
+                                <button onclick="increment()" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart">
+                                    <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                                    </svg>
+                                    <span class="ml-8 absolute-flex items-center justify-center text-sm font-bold text-wjhite">
+                                        Add To Cart
+                                    </span>
+                                </button>
+                            </div>
+                            
+                            <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                                <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" 
+                                    alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
+                                <div class="mt-4 flex justify-between mr-4">
+                                    <div class="ml-4">
+                                        <h3 class="text-sm font-bold text-gray-700 product-title">Carhartt</h3>
+                                        <p class="mt-1 text-sm text-black  product-color">Black</p> 
+                                        </div>
+                                        <div class="">
+                                            <p class=" text-sm text-gray-500 product-size">Medium</p>
+                                            <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱449</p>
+                                        </div>
+                                </div>
+                                <button onclick="increment()" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart">
+                                    <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                                    </svg>
+                                    <span class="ml-8 absolute-flex items-center justify-center text-sm font-bold text-wjhite">
+                                        Add To Cart
+                                    </span>
+                                </button>
                             </div>
                         </div>
+                        
 
-                <div id="cart" class="fixed top-0 right-[-100%] w-[360px] h-full bg-white shadow-lg p-[65px_20px_40px] z-[100] overflow-auto transition-all duration-400">
+
+                    <!--
+
+                    SHOES
+                        
+                    -->
+
+
+                    <h3 class=" pt-5 pb-24 text-4xl font-bold tracking-tight text-gray-900"><section id="shoes">Latest Thrift</section></h1>        
+                    <h2 class="text-2xl font-bold tracking-tight text-gray-900">Shoes</h2>
+                    <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+                        <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                            <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" 
+                                alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
+                            <div class="mt-4 flex justify-between mr-4">
+                                <div class="ml-4">
+                                    <h3 class="text-sm font-bold text-gray-700 product-title">Carhartt</h3>
+                                    <p class="mt-1 text-sm text-black product-color">Black</p> 
+                                    </div>
+                                    <div class="">
+                                        <p class=" text-sm text-gray-500 product-size">Medium</p>
+                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱449</p>
+                                    </div>
+                            </div>
+                            <button onclick="increment()" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart">
+                                <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                                </svg>
+                                <span class="ml-8 absolute-flex items-center justify-center text-sm font-bold text-wjhite">
+                                    Add To Cart
+                                </span>
+                            </button>
+                        </div>
+                        
+                        <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                            <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" 
+                                alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
+                            <div class="mt-4 flex justify-between mr-4">
+                                <div class="ml-4">
+                                    <h3 class="text-sm font-bold text-gray-700 product-title">Carhartt</h3>
+                                    <p class="mt-1 text-sm text-black  product-color">Black</p> 
+                                    </div>
+                                    <div class="">
+                                        <p class=" text-sm text-gray-500 product-size">Medium</p>
+                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱449</p>
+                                    </div>
+                            </div>
+                            <button onclick="increment()" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart">
+                                <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                                </svg>
+                                <span class="ml-8 absolute-flex items-center justify-center text-sm font-bold text-wjhite">
+                                    Add To Cart
+                                </span>
+                            </button>
+                        </div>
+                                
+                        <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                            <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" 
+                                alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
+                            <div class="mt-4 flex justify-between mr-4">
+                                <div class="ml-4">
+                                    <h3 class="text-sm font-bold text-gray-700 product-title">Carhartt</h3>
+                                    <p class="mt-1 text-sm text-black  product-color">Black</p> 
+                                    </div>
+                                    <div class="">
+                                        <p class=" text-sm text-gray-500 product-size">Medium</p>
+                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱449</p>
+                                    </div>
+                            </div>
+                            <button onclick="increment()" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart">
+                                <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                                </svg>
+                                <span class="ml-8 absolute-flex items-center justify-center text-sm font-bold text-wjhite">
+                                    Add To Cart
+                                </span>
+                            </button>
+                        </div>
+                        
+                        <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                            <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" 
+                                alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
+                            <div class="mt-4 flex justify-between mr-4">
+                                <div class="ml-4">
+                                    <h3 class="text-sm font-bold text-gray-700 product-title">Carhartt</h3>
+                                    <p class="mt-1 text-sm text-black  product-color">Black</p> 
+                                    </div>
+                                    <div class="">
+                                        <p class=" text-sm text-gray-500 product-size">Medium</p>
+                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱449</p>
+                                    </div>
+                            </div>
+                            <button onclick="increment()" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart">
+                                <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                                </svg>
+                                <span class="ml-8 absolute-flex items-center justify-center text-sm font-bold text-wjhite">
+                                    Add To Cart
+                                </span>
+                            </button>
+                        </div>
+
+                        <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                            <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" 
+                                alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
+                            <div class="mt-4 flex justify-between mr-4">
+                                <div class="ml-4">
+                                    <h3 class="text-sm font-bold text-gray-700 product-title">Carhartt</h3>
+                                    <p class="mt-1 text-sm text-black product-color">Black</p> 
+                                    </div>
+                                    <div class="">
+                                        <p class=" text-sm text-gray-500 product-size">Medium</p>
+                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱449</p>
+                                    </div>
+                            </div>
+                            <button onclick="increment()" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart">
+                                <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                                </svg>
+                                <span class="ml-8 absolute-flex items-center justify-center text-sm font-bold text-wjhite">
+                                    Add To Cart
+                                </span>
+                            </button>
+                        </div>
+                        
+                        <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                            <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" 
+                                alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
+                            <div class="mt-4 flex justify-between mr-4">
+                                <div class="ml-4">
+                                    <h3 class="text-sm font-bold text-gray-700 product-title">Carhartt</h3>
+                                    <p class="mt-1 text-sm text-black  product-color">Black</p> 
+                                    </div>
+                                    <div class="">
+                                        <p class=" text-sm text-gray-500 product-size">Medium</p>
+                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱449</p>
+                                    </div>
+                            </div>
+                            <button onclick="increment()" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart">
+                                <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                                </svg>
+                                <span class="ml-8 absolute-flex items-center justify-center text-sm font-bold text-wjhite">
+                                    Add To Cart
+                                </span>
+                            </button>
+                        </div>
+                                
+                        <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                            <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" 
+                                alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
+                            <div class="mt-4 flex justify-between mr-4">
+                                <div class="ml-4">
+                                    <h3 class="text-sm font-bold text-gray-700 product-title">Carhartt</h3>
+                                    <p class="mt-1 text-sm text-black  product-color">Black</p> 
+                                    </div>
+                                    <div class="">
+                                        <p class=" text-sm text-gray-500 product-size">Medium</p>
+                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱449</p>
+                                    </div>
+                            </div>
+                            <button onclick="increment()" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart">
+                                <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                                </svg>
+                                <span class="ml-8 absolute-flex items-center justify-center text-sm font-bold text-wjhite">
+                                    Add To Cart
+                                </span>
+                            </button>
+                        </div>
+                        
+                        <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                            <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" 
+                                alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
+                            <div class="mt-4 flex justify-between mr-4">
+                                <div class="ml-4">
+                                    <h3 class="text-sm font-bold text-gray-700 product-title">Carhartt</h3>
+                                    <p class="mt-1 text-sm text-black  product-color">Black</p> 
+                                    </div>
+                                    <div class="">
+                                        <p class=" text-sm text-gray-500 product-size">Medium</p>
+                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱449</p>
+                                    </div>
+                            </div>
+                            <button onclick="increment()" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart">
+                                <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                                </svg>
+                                <span class="ml-8 absolute-flex items-center justify-center text-sm font-bold text-wjhite">
+                                    Add To Cart
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+
+                <div id="cart" class="fixed top-0 right-[-100%] w-[360px] h-full bg-orange-50 shadow-lg p-[65px_20px_40px] z-[100] overflow-auto transition-all duration-400">
                     <h3 class="font-bold text-center text-3xl">Shopping Cart</h3>
                     
                         <div id="cart-items"></div>

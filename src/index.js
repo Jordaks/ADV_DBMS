@@ -1,17 +1,11 @@
-function increment() {
-    let countElement = document.getElementById("count");
-    let currentValue = parseInt(countElement.innerText);
-    countElement.innerText = currentValue + 1;
-}
-
-
-
 
 document.addEventListener("DOMContentLoaded", () => {
     const addCartButtons = document.querySelectorAll(".add-to-cart");
     const cartItemsContainer = document.getElementById("cart-items");
     const cartTotalContainer = document.getElementById("cart-total");
+    const cartCountBadge = document.getElementById("cart-count");
     let totalAmount = 0;
+    let cartCount = 0;
 
     addCartButtons.forEach(button => {
         button.addEventListener("click", (event) => {
@@ -45,27 +39,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
         cartItemsContainer.appendChild(cartItem);
         totalAmount += parseFloat(productPrice);
-        updateTotal();
+        cartCount++;
+        updateCart();
 
-        
+
         // Remove item event
         cartItem.querySelector(".remove-item").addEventListener("click", () => {
             cartItem.remove();
             totalAmount -= parseFloat(productPrice);
-            updateTotal();
+            cartCount--;
+            updateCart();
         });
     }
 
-    function updateTotal() {
+    function updateCart() {
         cartTotalContainer.textContent = `₱${totalAmount.toFixed(2)}`;
+        cartCountBadge.textContent = cartCount;
+        cartCountBadge.style.display = cartCount > 0 ? "block" : "none";
     }
 
-
+    // Toggle Cart Function
+    window.toggleCart = function() {
+        const cart = document.getElementById("cart");
+        cart.style.right = cart.style.right === "0px" ? "-100%" : "0px";
+    };
 });
-
-function toggleCart() {
-    cart.classList.toggle("right-0");
-    cart.classList.toggle("right-[-100%]");
-}
-
-
