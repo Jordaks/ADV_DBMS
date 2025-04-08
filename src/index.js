@@ -63,4 +63,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const cart = document.getElementById("cart");
         cart.style.right = cart.style.right === "0px" ? "-100%" : "0px";
     };
+
+    // Toggle User Function
+    window.toggleUser = function() {
+        const user = document.getElementById("user");
+        user.style.right = user.style.right === "0px" ? "-100%" : "0px";
+    };
 });
+

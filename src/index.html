@@ -43,6 +43,14 @@
                                         <p id="cart-count" class="bg-orange-500 text-white text-xs rounded-full flex items-center justify-center absolute top-7 left-[79%] px-1 py-[2px]">0</p>
                                     </span>
                             </button>
+                            
+                                <button onclick="toggleUser()" class="p-3 ">
+                                    <span>
+                                        <svg class="hover:scale-110 transition duration-500 text-gray-800 w-10 h-10"  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                        </svg>
+                                    </span>
+                                </button>
 
                                 <div class="hover:scale-110 transition duration-500 relative ml-3 border-2 rounded-xl border-black bg-white hover:border-gray-500">
                                     <a href="log_in.html" target="_blank">
@@ -694,6 +702,29 @@
                         
                     
                 </div>
+
+                <div id="user" class="fixed top-0 right-[-100%] w-[360px] border-2 h-full bg-orange-50 shadow-lg p-[65px_20px_40px] z-[100] overflow-auto transition-all duration-400">
+                    <span>
+                        <svg class="hover:scale-110 transition duration-500 text-gray-800 size-16 font-bold ml-32"  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                        </svg>
+                    </span>
+                    <h3 class="font-bold pb-10 text-center text-3xl">My Profile</h3>
+                    
+                
+                        <button class="mt-5 w-full bg-orange-500 text-white py-2 font-bold rounded-2xl hover:bg-orange-400">
+                            Logout
+                        </button>
+                        
+                        <button onclick="toggleUser()"  class="absolute top-5 right-4 text-[35px] cursor-pointer">
+                            <svg   xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 hover:text-red-500">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                        
+                    
+                </div>
+
         </main>
 
         <footer  >
