@@ -1,11 +1,5 @@
 <?php
-    session_start();
 
-    $authenticated = false;
-
-?>
-
-<?php
-    if($authenticated   == false){
-        
-    }
+    $con = mysqli_connect("localhost", "root", "", "thrift_shop") or die("Connection failed: " . mysqli_connect_error());
+    
+?> 

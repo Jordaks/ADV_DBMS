@@ -1,3 +1,15 @@
+<?php   
+    include ("database.php");
+
+    session_start();    
+
+    $authenticated = false;
+    
+    if (isset ($_SESSION["email"] )) {
+        $authenticated = true;
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +24,6 @@
 
 </head>
 <body >
-    
 
     <div class="bg-orange-100">
         <!-- Navbar -->
@@ -21,7 +32,7 @@
                     <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                         <div class="hidden sm:ml-6 sm:block">
                             <div class=" flex space-x-4">
-                            <img src="/image/R.png" alt="Logo" class="w-8 h-8">
+                            <img src="/ADV_DBMS/image/R.png" alt="Logo" class="w-8 h-8">
                             <a href="#" class="active hover:scale-110 hover:text-white hover:bg-gray-700 transition duration-500 rounded-md px-3 py-2 text-sm font-bold text-black">Home</a>
                             <a href="#t-shirt" class="hover:scale-110 transition duration-500 rounded-md px-3 py-2 text-sm  font-bold text-black hover:bg-gray-700 hover:text-white">T-shirt</a>
                             <a href="#shorts" class="hover:scale-110 transition duration-500 rounded-md px-3 py-2 text-sm font-bold text-black hover:bg-gray-700 hover:text-white">Shorts</a>
@@ -40,10 +51,13 @@
                                             <path fill-rule="evenodd" d="M7.5 6v.75H5.513c-.96 0-1.764.724-1.865 1.679l-1.263 12A1.875 1.875 0 0 0 4.25 22.5h15.5a1.875 1.875 0 0 0 1.865-2.071l-1.263-12a1.875 1.875 0 0 0-1.865-1.679H16.5V6a4.5 4.5 0 1 0-9 0ZM12 3a3 3 0 0 0-3 3v.75h6V6a3 3 0 0 0-3-3Zm-3 8.25a3 3 0 1 0 6 0v-.75a.75.75 0 0 1 1.5 0v.75a4.5 4.5 0 1 1-9 0v-.75a.75.75 0 0 1 1.5 0v.75Z" clip-rule="evenodd" />
                                         </svg>
                                         
-                                        <p id="cart-count" class="bg-orange-500 text-white text-xs rounded-full flex items-center justify-center absolute top-7 left-[79%] px-1 py-[2px]">0</p>
                                     </span>
                             </button>
-                            
+
+                            <?php
+                                if($authenticated){
+                            ?>
+                                <p id="cart-count" class="bg-orange-500 text-white text-xs rounded-full flex items-center justify-center absolute top-7 left-[86.5%] px-1 py-[2px]">0</p>
                                 <button onclick="toggleUser()" class="p-3 ">
                                     <span>
                                         <svg class="hover:scale-110 transition duration-500 text-gray-800 w-10 h-10"  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -52,8 +66,11 @@
                                     </span>
                                 </button>
 
+                            <?php
+                            } else {
+                            ?>  
                                 <div class="hover:scale-110 transition duration-500 relative ml-3 border-2 rounded-xl border-black bg-white hover:border-gray-500">
-                                    <a href="log_in.html" target="_blank">
+                                    <a href="log_in.php" target="">
                                         <button type="button" class="ml-1.5 mr-1.5  hover:scale-110 transition duration-500 relative rounded-full p-1 text-black hover:text-gray-500 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden font-bold"> LOG IN
                                             <span class="absolute -inset-1.5"></span>
                                         </button>
@@ -61,17 +78,20 @@
                                 </div>
 
                                 <div class="hover:scale-110 transition duration-500 relative ml-3 border-2 rounded-xl border-black bg-white hover:border-gray-500 ">
-                                    <a href="sign_up.html" target="_blank">
+                                    <a href="sign_up.php" target="">
                                         <button type="button" class="ml-1.5 mr-1.5 hover:scale-110 transition duration-500 relative rounded-full p-1 text-black hover:text-gray-500 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden font-bold"> SIGN UP
                                             <span class="absolute -inset-1.5"></span>
                                         </button>
                                     </a>
                                 </div>
+                            <?php
+                            }
+                            ?>                          
                         </div>
                 </div>
             </nav>
 
-        <header class="bg-[url('/bg.jpg')] bg-center px-20 min-h-screen grid place-items-center" >            
+        <header class="bg-[url('/ADV_DBMS/bg.jpg')] bg-center px-20 min-h-screen grid place-items-center" >            
                 <div >
                     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 border-2 border-gray-200 backdrop-filter backdrop-blur-md bg-opacity-10 rounded-4xl">
                         <div class="m-8 p-8">
@@ -85,6 +105,9 @@
         </header>
 
         <main  >
+
+            
+
             <div class="bg-orange-50">
                 <h1 class="ml-24 pt-5 text-4xl pl-2 font-bold tracking-tight text-gray-900"><section id="t-shirt">Latest Thrift</section></h1>
                 <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
@@ -100,7 +123,7 @@
                     <h2 class="text-2xl font-bold tracking-tight text-gray-900">T-shirt</h2>
                     <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
                         <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                            <img src="/image/carhartt1.jpg" 
+                            <img src="/ADV_DBMS/image/carhartt1.jpg" 
                                 alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
                             <div class="mt-4 flex justify-between mr-4">
                                 <div class="ml-4">
@@ -123,7 +146,7 @@
                         </div>
                         
                         <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                            <img src="/image/carhartt2.jpg" 
+                            <img src="/ADV_DBMS/image/carhartt2.jpg" 
                                 alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
                             <div class="mt-4 flex justify-between mr-4">
                                 <div class="ml-4">
@@ -146,7 +169,7 @@
                         </div>
                                 
                         <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                            <img src="/image/adidas.jpg" 
+                            <img src="/ADV_DBMS/image/adidas.jpg" 
                                 alt="Adidas Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
                             <div class="mt-4 flex justify-between mr-4">
                                 <div class="ml-4">
@@ -169,7 +192,7 @@
                         </div>
                         
                         <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                            <img src="/image/crt.jpg" 
+                            <img src="/ADV_DBMS/image/crt.jpg" 
                                 alt="CRT Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
                             <div class="mt-4 flex justify-between mr-4">
                                 <div class="ml-4">
@@ -192,7 +215,7 @@
                         </div>
 
                         <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                            <img src="/image/internalreform.jpg" 
+                            <img src="/ADV_DBMS/image/internalreform.jpg" 
                                 alt="Internal Reform Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
                             <div class="mt-4 flex justify-between mr-4">
                                 <div class="ml-4">
@@ -215,7 +238,7 @@
                         </div>
                         
                         <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                            <img src="/image/lemandik.jpg" 
+                            <img src="/ADV_DBMS/image/lemandik.jpg" 
                                 alt="Lemandik Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
                             <div class="mt-4 flex justify-between mr-4">
                                 <div class="ml-4">
@@ -238,7 +261,7 @@
                         </div>
                                 
                         <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                            <img src="/image/star.jpg" 
+                            <img src="/ADV_DBMS/image/star.jpg" 
                                 alt="Star Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
                             <div class="mt-4 flex justify-between mr-4">
                                 <div class="ml-4">
@@ -261,7 +284,7 @@
                         </div>
                         
                         <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                            <img src="/image/teeluv.jpg" 
+                            <img src="/ADV_DBMS/image/teeluv.jpg" 
                                 alt="TeeLuv Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
                             <div class="mt-4 flex justify-between mr-4">
                                 <div class="ml-4">
@@ -296,7 +319,7 @@
                     <h2 class="text-2xl font-bold tracking-tight text-gray-900">Shorts</h2>
                         <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
                             <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                                <img src="/image/jorts1.jpg" 
+                                <img src="/ADV_DBMS/image/jorts1.jpg" 
                                     alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
                                 <div class="mt-4 flex justify-between mr-4">
                                     <div class="ml-4">
@@ -319,7 +342,7 @@
                             </div>
                             
                             <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                                <img src="/image/jorts2.jpg" 
+                                <img src="/ADV_DBMS/image/jorts2.jpg" 
                                     alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
                                 <div class="mt-4 flex justify-between mr-4">
                                     <div class="ml-4">
@@ -342,7 +365,7 @@
                             </div>
                                     
                             <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                                <img src="/image/palda1.jpg" 
+                                <img src="/ADV_DBMS/image/palda1.jpg" 
                                     alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
                                 <div class="mt-4 flex justify-between mr-4">
                                     <div class="ml-4">
@@ -365,7 +388,7 @@
                             </div>
                             
                             <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                                <img src="/image/shorts].jpg" 
+                                <img src="/ADV_DBMS/image/shorts].jpg" 
                                     alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
                                 <div class="mt-4 flex justify-between mr-4">
                                     <div class="ml-4">
@@ -388,7 +411,7 @@
                             </div>
     
                             <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                                <img src="/image/jorts3.jpg" 
+                                <img src="/ADV_DBMS/image/jorts3.jpg" 
                                     alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
                                 <div class="mt-4 flex justify-between mr-4">
                                     <div class="ml-4">
@@ -411,7 +434,7 @@
                             </div>
                             
                             <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                                <img src="/image/jorts4.jpg" 
+                                <img src="/ADV_DBMS/image/jorts4.jpg" 
                                     alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
                                 <div class="mt-4 flex justify-between mr-4">
                                     <div class="ml-4">
@@ -434,7 +457,7 @@
                             </div>
                                     
                             <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                                <img src="/image/palda2.jpg" 
+                                <img src="/ADV_DBMS/image/palda2.jpg" 
                                     alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
                                 <div class="mt-4 flex justify-between mr-4">
                                     <div class="ml-4">
@@ -457,7 +480,7 @@
                             </div>
                             
                             <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                                <img src="/image/jorts5.jpg" 
+                                <img src="/ADV_DBMS/image/jorts5.jpg" 
                                     alt="Carhartt Short" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
                                 <div class="mt-4 flex justify-between mr-4">
                                     <div class="ml-4">
@@ -493,7 +516,7 @@
                     <h2 class="text-2xl font-bold tracking-tight text-gray-900">Shoes</h2>
                     <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
                         <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                            <img src="/image/AF1.jpg" 
+                            <img src="/ADV_DBMS/image/AF1.jpg" 
                                 alt="Air Force 1" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
                             <div class="mt-4 flex justify-between mr-4">
                                 <div class="ml-4">
@@ -516,7 +539,7 @@
                         </div>
                         
                         <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                            <img src="/image/altra.jpg" 
+                            <img src="/ADV_DBMS/image/altra.jpg" 
                                 alt="Altra" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
                             <div class="mt-4 flex justify-between mr-4">
                                 <div class="ml-4">
@@ -539,7 +562,7 @@
                         </div>
                                 
                         <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                            <img src="/image/clogs.jpg" 
+                            <img src="/ADV_DBMS/image/clogs.jpg" 
                                 alt="Birkenstock Clogs" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
                             <div class="mt-4 flex justify-between mr-4">
                                 <div class="ml-4">
@@ -562,7 +585,7 @@
                         </div>
                         
                         <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                            <img src="/image/converse.jpg" 
+                            <img src="/ADV_DBMS/image/converse.jpg" 
                                 alt="Converse" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
                             <div class="mt-4 flex justify-between mr-4">
                                 <div class="ml-4">
@@ -585,7 +608,7 @@
                         </div>
 
                         <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                            <img src="/image/DR.M.jpg" 
+                            <img src="/ADV_DBMS/image/DR.M.jpg" 
                                 alt="Dr.Martens" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
                             <div class="mt-4 flex justify-between mr-4">
                                 <div class="ml-4">
@@ -608,7 +631,7 @@
                         </div>
                         
                         <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                            <img src="/image/newb.jpg" 
+                            <img src="/ADV_DBMS/image/newb.jpg" 
                                 alt="New Balance 530" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
                             <div class="mt-4 flex justify-between mr-4">
                                 <div class="ml-4">
@@ -631,7 +654,7 @@
                         </div>
                                 
                         <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                            <img src="/image/converse1.jpg" 
+                            <img src="/ADV_DBMS/image/converse1.jpg" 
                                 alt="Converse" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
                             <div class="mt-4 flex justify-between mr-4">
                                 <div class="ml-4">
@@ -654,7 +677,7 @@
                         </div>
                         
                         <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                            <img src="/image/travis.jpg" 
+                            <img src="/ADV_DBMS/image/travis.jpg" 
                                 alt="Travis Scott" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
                             <div class="mt-4 flex justify-between mr-4">
                                 <div class="ml-4">
@@ -711,10 +734,12 @@
                     </span>
                     <h3 class="font-bold pb-10 text-center text-3xl">My Profile</h3>
                     
-                
+                    <a href="logout.php">
                         <button class="mt-5 w-full bg-orange-500 text-white py-2 font-bold rounded-2xl hover:bg-orange-400">
                             Logout
                         </button>
+                    </a>
+                        
                         
                         <button onclick="toggleUser()"  class="absolute top-5 right-4 text-[35px] cursor-pointer">
                             <svg   xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 hover:text-red-500">
@@ -772,6 +797,7 @@
                             </span>
                         </div>
                     </div>
+
                     
             <div class="mt-auto bg-gray-800 text-white text-center py-4">
                 &copy; 2025 RETHRY. All Rights Reserved. |
