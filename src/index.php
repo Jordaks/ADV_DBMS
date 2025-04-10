@@ -867,10 +867,10 @@
                             <div class="mt-4 flex justify-between mr-4">
                                 <div class="ml-4">
                                     <h3 class="text-sm font-bold text-gray-700 product-title">New Balance 530</h3>
-                                    <p class="mt-1 text-sm text-black  product-color">Black</p> 
+                                    <p class="mt-1 text-sm text-black  product-color">White</p> 
                                     </div>
                                     <div class="">
-                                        <p class=" text-sm text-gray-500 product-size">White</p>
+                                        <p class=" text-sm text-gray-500 product-size">40-42</p>
                                         <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱900</p>
                                     </div>
                             </div>
@@ -904,7 +904,7 @@
                                     <p class="mt-1 text-sm text-black  product-color">White/Black</p> 
                                     </div>
                                     <div class="">
-                                        <p class=" text-sm text-gray-500 product-size">Medium</p>
+                                        <p class=" text-sm text-gray-500 product-size">44</p>
                                         <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱850</p>
                                     </div>
                             </div>
