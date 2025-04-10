@@ -803,7 +803,7 @@
                                     </div>
                                     <div class="">
                                         <p class=" text-sm text-gray-500 product-size">45</p>
-                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱1100</p>
+                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱1150</p>
                                     </div>
                             </div>
                             <?php if ($authenticated): ?>
@@ -999,12 +999,12 @@
                     <h3 class="font-bold pb-10 text-center text-3xl">My Profile</h3>
 
                     <div class="flex justify-between items-center  border-black mt-5 pt-2 text-lg font-semibold">
-                        <span class="text-gray-500">Name:</span>
+                        <span class="text-gray-500">Name: </span>
                         <span class="text-gray-800 font-bold"><?= $name ?></span>
                     </div>
 
                     <div class="flex justify-between items-center  border-black mt-5 pt-2 text-lg font-semibold">
-                        <span class="text-gray-500">Email:</span>
+                        <span class="text-gray-500">Email: </span>
                         <span class="text-gray-800 font-bold"><?= $email ?></span>
                     </div>
 
