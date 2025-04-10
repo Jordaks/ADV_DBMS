@@ -6,59 +6,32 @@
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $name = $_POST['name'];
             $email = $_POST['email'];
+            $phone = $_POST['phone'];
             $address = $_POST['address'];
             $password = $_POST['password'];
 
+            $name_error = "";
 
-            if(!empty($name) && !empty($email) && !empty($address) && !empty($password)) {
+            $error = false;
 
-                $query = "insert into user_db (name, email, address, password) values ('$name', '$email', '$address', '$password')";
+            // Validate the name
+
+            if (!preg_match("/^[a-zA-Z-' ]*$/", $name)) {
+                $name_error = "Only letters, apostrophes, hyphens, and white space allowed";
+                $error = true;
+
+                echo "<script> type='text/javascript'> alert('Only letters, apostrophes, hyphens, and white space allowed!')</script>";
+
+            }else{
+
+                $query = "insert into users (name, email, phone, address, password) values ('$name', '$email', '$phone', '$address', '$password')";
 
                 mysqli_query($con, $query);
-
-                echo "<script> type='text/javascript'> alert('Registration successful!')</script>";
 
                 // Redirect to the login page
                 header("Location: log_in.php");
                 exit();
-                
-            }else {
-                echo "<script> type='text/javascript'> alert('Please fill all the fields!')</script>";
             }
-
-            /* Validate the email
-            if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                $email_error = "Invalid email format";
-                $error = true;z
-            }
-
-            $dbConnection = getDatabaseConnection();
-
-            $statement = $dbConnection->prepare("SELECT id FROM user_db WHERE email = ?");
-
-            // Bind variables to the statement as parameters
-            $statement->bind_param("s", $email);
-
-            // Execute the statement
-            $statement->execute();
-
-            //check if the email already exists
-            $statement->store_result();
-            if ($statement->num_rows > 0) {
-                $email_error = "Email already exists";
-                $error = true;
-            }
-
-            // Close the statement
-            $statement->close();
-
-            */            
-            // Validate the password  
-
-            
-            // Redirect to the login page
-            //header("Location: log_in.php");
-            //exit();
             
         }
 ?>
@@ -90,6 +63,11 @@
                     <label for="email" class="block text-m text-gray-00 ">Email</label>
                     <input type="email" placeholder="Your Email" name="email" id="email" value="<?= $email ?>" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-orange-500 focus:bg-white focus:outline-none"  required>
                     <span class="text-danger"><?= $email_error = ""; ?></span>
+                </div>
+                <div class="mt-7">
+                    <label for="phone" class="block text-m text-gray-00 ">Phone</label>
+                    <input type="text" placeholder="Your Phone Number" name="phone" id="phone" value="<?= $phone ?>" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-orange-500 focus:bg-white focus:outline-none" required>
+                    <span class="text-danger"><?= $phone_error = ""; ?></span>
                 </div>
                 <div class="mt-7" >
                     <label for="address" class="block text-m text-gray-00 ">Address</label>

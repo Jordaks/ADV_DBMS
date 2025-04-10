@@ -10,7 +10,7 @@
 
         if(!empty($email) && !empty($password)) {
 
-            $query = "SELECT * FROM user_db WHERE email = '$email' limit 1";
+            $query = "SELECT * FROM users WHERE email = '$email' limit 1";
             $result = mysqli_query($con, $query);
 
             if($result){
