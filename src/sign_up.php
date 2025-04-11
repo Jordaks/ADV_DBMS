@@ -56,27 +56,27 @@
             <form method="POST">
                 <div class="mt-7">
                     <label for="name" class="block text-m text-gray-00 "> Name</label>
-                    <input type="name" placeholder="Your Name" name="name" id="name" value="<?= $name ?>" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-orange-500 focus:bg-white focus:outline-none" required>
+                    <input type="name" placeholder="Enter your name" name="name" id="name" value="<?= $name ?>" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-orange-500 focus:bg-white focus:outline-none" required>
                     <span class="text-danger"><?= $name_error = ""; ?></span>
                 </div>
                 <div class="mt-7">
                     <label for="email" class="block text-m text-gray-00 ">Email</label>
-                    <input type="email" placeholder="Your Email" name="email" id="email" value="<?= $email ?>" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-orange-500 focus:bg-white focus:outline-none"  required>
+                    <input type="email" placeholder="Enter your email" name="email" id="email" value="<?= $email ?>" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-orange-500 focus:bg-white focus:outline-none"  required>
                     <span class="text-danger"><?= $email_error = ""; ?></span>
                 </div>
                 <div class="mt-7">
                     <label for="phone" class="block text-m text-gray-00 ">Phone</label>
-                    <input type="text" placeholder="Your Phone Number" name="phone" id="phone" value="<?= $phone ?>" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-orange-500 focus:bg-white focus:outline-none" required>
+                    <input type="text" placeholder="Enter your phone number" name="phone" id="phone" value="<?= $phone ?>" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-orange-500 focus:bg-white focus:outline-none" required>
                     <span class="text-danger"><?= $phone_error = ""; ?></span>
                 </div>
                 <div class="mt-7" >
                     <label for="address" class="block text-m text-gray-00 ">Address</label>
-                    <input type="text" placeholder="Your address" name="address" id="address" value="<?= $address ?>"  class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-orange-500 focus:bg-white focus:outline-none" required>
+                    <input type="text" placeholder="Enter your address" name="address" id="address" value="<?= $address ?>"  class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-orange-500 focus:bg-white focus:outline-none" required>
                     <span class="text-danger"><?= $address_error = ""; ?></span>
                 </div>
                 <div class="mt-7">
                     <label for="password" class="block text-m text-gray-00">Password</label>
-                    <input type="password" placeholder="Your Password" minlength="8" name="password" id="password" value="<?= $password ?>"  class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-orange-500 focus:bg-white focus:outline-none" required>
+                    <input type="password" placeholder="Enter your password" minlength="8" name="password" id="password" value="<?= $password ?>"  class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-orange-500 focus:bg-white focus:outline-none" required>
                     <span class="text-danger"><?= $password_error = ""; ?></span>
                 </div>
                 <div class="mt-10">

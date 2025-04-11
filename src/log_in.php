@@ -18,12 +18,17 @@
                     
                     $user_data = mysqli_fetch_assoc($result);
                     
-                    if($user_data['password'] === $password){
-                        $_SESSION["email"] = $email;
+                    if ($user_data['password'] === $password) {
+                        // Assign values from $user_data to variables
+                        $_SESSION["name"] = $user_data["name"];
+                        $_SESSION["email"] = $user_data["email"];
+                        $_SESSION["address"] = $user_data["address"];
+                        $_SESSION["phone"] = $user_data["phone"];
+                        // Redirect to index.php
                         header("Location: index.php");
                         exit();
                     } 
-                } 
+                }   
             }
             echo "<script> type='text/javascript'> alert('Invalid email or password!')</script>";
         }
@@ -52,11 +57,11 @@
             <form method="POST">
                 <div class="mt-10">
                     <label for="email" class="block text-m text-gray-00 ">Email</label>
-                    <input type="email" name="email" placeholder="Your Email" id="email" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-orange-500 focus:bg-white focus:outline-none" required>
+                    <input type="email" name="email" placeholder="Enter your email" id="email" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-orange-500 focus:bg-white focus:outline-none" required>
                 </div>
                 <div class="mt-7">
                     <label for="password" class="block text-m text-gray-00">Password</label>
-                    <input type="password" minlength="8" placeholder="Your Password" name="password" id="password" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-orange-500 focus:bg-white focus:outline-none" required>
+                    <input type="password" minlength="8" placeholder="Enter your password" name="password" id="password" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-orange-500 focus:bg-white focus:outline-none" required>
                 </div>
                 <div class="mt-10">
                     <button type="submit" class="w-full bg-orange-300 hover:bg-orange-500 text-white font-semibold p-3 rounded-lg">Log In</button>
