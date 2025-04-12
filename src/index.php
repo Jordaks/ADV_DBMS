@@ -166,7 +166,7 @@ session_start();
                                     alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
                                 <div class="mt-4 flex justify-between mr-4">
                                     <div class="ml-4">
-                                        <h3 class="text-sm font-bold text-gray-700 product-title">Carhartt</h3>
+                                        <h3 class="text-sm font-bold text-gray-700 product-title">Carhartt Henley </h3>
                                         <p class="mt-1 text-sm text-black  product-color">Black</p> 
                                         </div>
                                         <div class="">
@@ -416,7 +416,7 @@ session_start();
                                     alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
                                 <div class="mt-4 flex justify-between mr-4">
                                     <div class="ml-4">
-                                        <h3 class="text-sm font-bold text-gray-700 product-title">Carhartt</h3>
+                                        <h3 class="text-sm font-bold text-gray-700 product-title">RRJ</h3>
                                         <p class="mt-1 text-sm text-black product-color">Blue</p> 
                                         </div>
                                         <div class="">
@@ -450,7 +450,7 @@ session_start();
                                     alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
                                 <div class="mt-4 flex justify-between mr-4">
                                     <div class="ml-4">
-                                        <h3 class="text-sm font-bold text-gray-700 product-title">Carhartt</h3>
+                                        <h3 class="text-sm font-bold text-gray-700 product-title">Jag Jeans</h3>
                                         <p class="mt-1 text-sm text-black  product-color">Denim Black</p> 
                                         </div>
                                         <div class="">
@@ -484,7 +484,7 @@ session_start();
                                     alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
                                 <div class="mt-4 flex justify-between mr-4">
                                     <div class="ml-4">
-                                        <h3 class="text-sm font-bold text-gray-700 product-title">Carhartt</h3>
+                                        <h3 class="text-sm font-bold text-gray-700 product-title">Bench</h3>
                                         <p class="mt-1 text-sm text-black  product-color">Light Blue</p> 
                                         </div>
                                         <div class="">
@@ -518,7 +518,7 @@ session_start();
                                     alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
                                 <div class="mt-4 flex justify-between mr-4">
                                     <div class="ml-4">
-                                        <h3 class="text-sm font-bold text-gray-700 product-title">Carhartt</h3>
+                                        <h3 class="text-sm font-bold text-gray-700 product-title">Oxygen</h3>
                                         <p class="mt-1 text-sm text-black  product-color">Aphricot</p> 
                                         </div>
                                         <div class="">
@@ -552,7 +552,7 @@ session_start();
                                     alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
                                 <div class="mt-4 flex justify-between mr-4">
                                     <div class="ml-4">
-                                        <h3 class="text-sm font-bold text-gray-700 product-title">Carhartt</h3>
+                                        <h3 class="text-sm font-bold text-gray-700 product-title">Lee</h3>
                                         <p class="mt-1 text-sm text-black product-color">Black</p> 
                                         </div>
                                         <div class="">
@@ -586,7 +586,7 @@ session_start();
                                     alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
                                 <div class="mt-4 flex justify-between mr-4">
                                     <div class="ml-4">
-                                        <h3 class="text-sm font-bold text-gray-700 product-title">Carhartt</h3>
+                                        <h3 class="text-sm font-bold text-gray-700 product-title">Levi's</h3>
                                         <p class="mt-1 text-sm text-black  product-color">Light Wash</p> 
                                         </div>
                                         <div class="">
@@ -620,7 +620,7 @@ session_start();
                                     alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
                                 <div class="mt-4 flex justify-between mr-4">
                                     <div class="ml-4">
-                                        <h3 class="text-sm font-bold text-gray-700 product-title">Carhartt</h3>
+                                        <h3 class="text-sm font-bold text-gray-700 product-title">Cotton On</h3>
                                         <p class="mt-1 text-sm text-black  product-color">Light Blue</p> 
                                         </div>
                                         <div class="">
@@ -654,7 +654,7 @@ session_start();
                                     alt="Carhartt Short" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
                                 <div class="mt-4 flex justify-between mr-4">
                                     <div class="ml-4">
-                                        <h3 class="text-sm font-bold text-gray-700 product-title">Carhartt</h3>
+                                        <h3 class="text-sm font-bold text-gray-700 product-title">H&M</h3>
                                         <p class="mt-1 text-sm text-black  product-color">Deep Blue</p> 
                                         </div>
                                         <div class="">
@@ -1003,19 +1003,20 @@ session_start();
                     </span>
                     <h3 class="font-bold pb-10 text-center text-3xl">My Profile</h3>
 
-                    <div class="flex justify-between items-center border-black mt-5 pt-2 text-lg font-semibold">
+                    <div class="flex justify-between items-center text-gray-700 mt-5 pt-2 text-lg font-semibold">
                         <p>Name: <span><?php echo $_SESSION["name"] ?? "Not set"; ?></span></p>
                     </div>
 
-                    <div class="flex justify-between items-center  border-black mt-10 pt-2 text-lg font-semibold">
+                    <div class="flex justify-between items-center text-gray-700 mt-10 pt-2 text-lg font-semibold">
                         <p>Email:  <span><?php echo $_SESSION["email"] ?? "Not set"; ?></span></p>
                     </div>
 
-                    <div class="flex justify-between items-center  border-black mt-10 pt-2 text-lg font-semibold">
-                        <p>Address: <span><?php echo $_SESSION["address"] ?? "Not set"; ?></span></p>
+                    <div class="flex justify-between items-center  text-gray-700  font-semibold mt-10 pt-2 text-lg ">
+                        <p>Address: <spa><?php echo $_SESSION["address"] ?? "Not set"; ?></spa></p>
+                        
                     </div>
 
-                    <div class="flex justify-between items-center  border-black mt-10 pt-2 pb-64 text-lg font-semibold">
+                    <div class="flex justify-between items-center  text-gray-700 mt-10 pt-2 pb-64 text-lg font-semibold">
                         <p>Contact: <span><?php echo $_SESSION["phone"] ?? "Not set"; ?></span></p>
                     </div>
 

@@ -7,18 +7,19 @@
 
         $email = $_POST['email'];
         $password = $_POST['password'];
+        $encpass = md5($password);
 
-        if(!empty($email) && !empty($password)) {
+        if(!empty($email) && !empty($encpass)) {
 
-            $query = "SELECT * FROM users WHERE email = '$email' limit 1";
+            $query = "SELECT * FROM users WHERE email = '$email' limit 1";  
             $result = mysqli_query($con, $query);
 
             if($result){
                 if($result && mysqli_num_rows($result) > 0){
                     
                     $user_data = mysqli_fetch_assoc($result);
-                    
-                    if ($user_data['password'] === $password) {
+
+                    if ($user_data['password'] === $encpass) {
                         // Assign values from $user_data to variables
                         $_SESSION["name"] = $user_data["name"];
                         $_SESSION["email"] = $user_data["email"];

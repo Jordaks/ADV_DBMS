@@ -9,10 +9,13 @@
             $phone = $_POST['phone'];
             $address = $_POST['address'];
             $password = $_POST['password'];
+            $encpass = md5($password);
 
             $name_error = "";
 
             $error = false;
+            
+
 
             // Validate the name
 
@@ -24,7 +27,7 @@
 
             }else{
 
-                $query = "insert into users (name, email, phone, address, password) values ('$name', '$email', '$phone', '$address', '$password')";
+                $query = "insert into users (name, email, phone, address, password) values ('$name', '$email', '$phone', '$address', '$encpass')";
 
                 mysqli_query($con, $query);
 
