@@ -69,5 +69,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const user = document.getElementById("user");
         user.style.right = user.style.right === "0px" ? "-100%" : "0px";
     };
+
+    // Toggle Orders Function
+    window.toggleOrder = function() {
+    const placeorder = document.getElementById("placeorder");
+    placeorder.style.right = placeorder.style.right === "0px" ? "-100%" : "0px";
+    };
+    
 });
 

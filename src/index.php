@@ -127,7 +127,7 @@ session_start();
 
                     <h2 class="text-2xl font-bold tracking-tight text-gray-900">T-shirt</h2>
                     <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-                            <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                            <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
                                 <img src="/ADV_DBMS/image/carhartt1.jpg" 
                                     alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
                                 <div class="mt-4 flex justify-between mr-4">
@@ -161,7 +161,7 @@ session_start();
                                 <?php } ?>  
                             </div>
                             
-                            <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                            <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
                                 <img src="/ADV_DBMS/image/carhartt2.jpg" 
                                     alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
                                 <div class="mt-4 flex justify-between mr-4">
@@ -195,7 +195,7 @@ session_start();
                                 <?php } ?>  
                             </div>
                                     
-                            <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                            <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300  rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
                                 <img src="/ADV_DBMS/image/adidas.jpg" 
                                     alt="Adidas Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
                                 <div class="mt-4 flex justify-between mr-4">
@@ -229,7 +229,7 @@ session_start();
                                 <?php } ?>  
                             </div>
                             
-                            <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                            <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300  rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
                                 <img src="/ADV_DBMS/image/crt.jpg" 
                                     alt="CRT Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
                                 <div class="mt-4 flex justify-between mr-4">
@@ -263,7 +263,7 @@ session_start();
                                 <?php } ?>  
                             </div>
 
-                            <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                            <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
                                 <img src="/ADV_DBMS/image/internalreform.jpg" 
                                     alt="Internal Reform Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
                                 <div class="mt-4 flex justify-between mr-4">
@@ -297,7 +297,7 @@ session_start();
                                 <?php } ?>  
                             </div>
                             
-                            <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                            <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
                                 <img src="/ADV_DBMS/image/lemandik.jpg" 
                                     alt="Lemandik Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
                                 <div class="mt-4 flex justify-between mr-4">
@@ -331,7 +331,7 @@ session_start();
                                 <?php } ?>  
                             </div>
                                     
-                            <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                            <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
                                 <img src="/ADV_DBMS/image/star.jpg" 
                                     alt="Star Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
                                 <div class="mt-4 flex justify-between mr-4">
@@ -365,7 +365,7 @@ session_start();
                                 <?php } ?>  
                             </div>
                             
-                            <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                            <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
                                 <img src="/ADV_DBMS/image/teeluv.jpg" 
                                     alt="TeeLuv Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
                                 <div class="mt-4 flex justify-between mr-4">
@@ -982,10 +982,14 @@ session_start();
                         <div class="flex justify-between items-center border-t border-black mt-5 pt-2 text-lg font-semibold">
                             Total: <span id="cart-total">₱0</span>
                         </div>
-                
-                        <button class="mt-5 w-full bg-orange-500 text-white py-2 font-bold rounded-2xl hover:bg-orange-400">
-                            CHECKOUT
-                        </button>
+            
+                        <a href="order.php">
+                            <button  class="mt-5 w-full bg-orange-500 text-white py-2 font-bold rounded-2xl hover:bg-orange-400">
+                                CHECKOUT
+                            </button>                            
+                        </a>
+
+                        
                         <button onclick="toggleCart()"  class="absolute top-5 right-4 text-[35px] cursor-pointer">
                             <svg   xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 hover:text-red-500">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -995,6 +999,49 @@ session_start();
                     
                 </div>
 
+                <div id="placeorder" class="fixed top-0 right-[-100%] w-[360px] border-2 h-full bg-orange-50 shadow-lg p-[65px_20px_40px] z-[100] overflow-auto transition-all duration-400">
+                <img src="/ADV_DBMS/image/R.png" alt="Logo" class="w-10 h-10 mb-5 text-center mx-auto">
+                
+                    <h3 class="font-bold pb-10 text-center text-3xl">Your order</h3>
+
+                    <h3 class="font-bold pb-10 text-center text-3xl"><i class="fa-solid fa-location-dot mr-5"></i>Delivery Address</h3>
+
+                    <div class="flex justify-between items-center text-gray-700 mt-5 pt-2 text-lg font-semibold">
+                        <span><?php echo $_SESSION["name"] ?? "Not set"; ?></span>
+                    </div>
+
+                    <div class="flex justify-between items-center text-gray-700 mt-10 pt-2 text-lg font-semibold">
+                        <span><?php echo $_SESSION["email"] ?? "Not set"; ?></span>
+                    </div>
+
+                    <div class="flex justify-between items-center  text-gray-700  font-semibold mt-10 pt-2 text-lg ">
+                        <spa><?php echo $_SESSION["address"] ?? "Not set"; ?></spa>
+                    </div>
+
+                    <div class="flex justify-between items-center  text-gray-700 mt-10 pt-2 pb-64 text-lg font-semibold">
+                        <span><?php echo $_SESSION["phone"] ?? "Not set"; ?></span>
+                    </div>
+                    
+                    <div id="cart-items"></div>
+                        
+                        <div class="flex justify-between items-center border-t border-black mt-5 pt-2 text-lg font-semibold">
+                            Total: <span id="cart-total">₱0</span>
+                        </div>
+                
+                        <button class="mt-5 w-full bg-orange-500 text-white py-2 font-bold rounded-2xl hover:bg-orange-400">
+                            Place Order
+                        </button>
+                        
+                        
+                        <button onclick="toggleOrder()"  class="absolute top-5 right-4 text-[35px] cursor-pointer">
+                            <svg   xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 hover:text-red-500">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    
+                </div>
+
+                
                 <div id="user" class="fixed top-0 right-[-100%] w-[360px] border-2 h-full bg-orange-50 shadow-lg p-[65px_20px_40px] z-[100] overflow-auto transition-all duration-400">
                     <span>
                         <svg class="hover:scale-110 transition duration-500 text-gray-800 size-16 font-bold ml-32"  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
