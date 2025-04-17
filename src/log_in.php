@@ -65,7 +65,7 @@
                     <input type="password" minlength="8" placeholder="Enter your password" name="password" id="password" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-orange-500 focus:bg-white focus:outline-none" required>
                 </div>
                 <div class="mt-10">
-                    <button type="submit" class="w-full bg-orange-300 hover:bg-orange-500 text-white font-semibold p-3 rounded-lg">Log In</button>
+                    <button type="submit" class="w-full mt-4 bg-orange-500 font-semibold text-white px-4 py-2 rounded-2xl hover:bg-orange-400">Log In</button>
                 </div>
             </form>
             <div class="mt-12 text-sm font-semibold text-center">

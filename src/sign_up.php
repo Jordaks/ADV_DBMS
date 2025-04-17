@@ -45,7 +45,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" type="image/png" href="/image/R.png"/>
+    <link rel="icon" type="image/png" href="/ADV_DBMS/image/R.png"/>
     <title>Sign Up</title>
 </head>
 <body >
@@ -83,7 +83,7 @@
                     <span class="text-danger"><?= $password_error = ""; ?></span>
                 </div>
                 <div class="mt-10">
-                    <button type="submit" class="w-full bg-orange-300 hover:bg-orange-500 text-white font-semibold p-3 rounded-lg">Create Account</button>
+                    <button type="submit" class="w-full font-semibold mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400">Create Account</button>
                 </div>
             </form>
             <div class="mt-12 text-sm font-semibold text-center">

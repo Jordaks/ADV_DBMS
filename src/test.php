@@ -1,108 +1,147 @@
+<!-- products.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100 p-6">
+    <title>Product Page</title>
+    <style>
+        body {
+        font-family: sans-serif;
+        padding: 20px;
+        }
+        .product {
+        max-width: 300px;
+        border: 1px solid #ccc;
+        border-radius: 12px;
+        overflow: hidden;
+        margin-bottom: 20px;
+        }
+        button {
+        cursor: pointer;
+        }
+        .cart-icon {
+        position: relative;
+        font-size: 24px;
+        text-decoration: none;
+        }
+        .cart-count {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        background: red;
+        color: white;
+        border-radius: 50%;
+        padding: 2px 6px;
+        font-size: 12px;
+        }
+    </style>
+    </head>
+    <body>
 
-    <!-- Product 1 -->
-    <div id="product1" class="hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-black rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-        <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" 
-            alt="Carhartt Tee" class="aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80">
-        <div class="mt-4 flex justify-between">
-            <div>
-                <h3 class="text-sm text-gray-700 product-title">Carhartt</h3>
-                <p class="mt-1 text-sm text-gray-500 product-color">Black</p>
-                <p class="mt-1 text-sm text-gray-500 product-size">Medium</p>
-                <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱449</p>
-            </div>
-        </div>
-        <button class="mt-4 bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-400 w-full add-to-cart">
-            Add To Cart
-        </button>
+    <!-- 🛒 Cart Icon -->
+    <div style="display: flex; justify-content: flex-end; margin-bottom: 20px;">
+        <a href="test_cart.php" class="cart-icon">
+        🛒
+        <span id="cart-count" class="cart-count">0</span>
+        </a>
     </div>
 
-    <!-- Shopping Cart -->
-    <div id="cart" class="fixed top-0 right-[-100%] w-[360px] h-full bg-white shadow-lg p-6 z-50 transition-all duration-400">
-        <h3 class="font-bold text-center text-3xl mb-4">Shopping Cart</h3>
-        
-        <div id="cart-items"></div>
-        
-        <div class="flex justify-between items-center border-t border-black mt-5 pt-2 text-lg font-semibold">
-            Total: <span id="cart-total">₱0</span>
+    <h1>Shop</h1>
+
+    <!-- 🧢 Product Card -->
+    <div class="product">
+        <img src="/ADV_DBMS/image/carhartt1.jpg" 
+            alt="Carhartt Tee" 
+            class="product-image aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80"
+            style="width: 100%; object-fit: cover;">
+
+        <div class="mt-4 flex justify-between mr-4" style="display: flex; justify-content: space-between; padding: 10px;">
+        <div class="ml-4">
+            <h3 class="text-sm font-bold text-gray-700 product-title">Carhartt</h3>
+            <p class="mt-1 text-sm text-black product-color">Black</p> 
+        </div>
+        <div>
+            <p class="text-sm text-gray-500 product-size">Large</p>
+            <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱449</p>
+        </div>
         </div>
 
-        <button class="mt-5 w-full bg-orange-500 text-white py-2 rounded hover:bg-orange-400">
-            CHECKOUT
+        <div class="ml-4 mt-2" style="padding: 10px;">
+        <button onclick="addToCart(this)" 
+                style="background-color: black; color: white; padding: 8px 16px; border: none; border-radius: 8px;">
+            Add to Cart
         </button>
-        
-        <button onclick="toggleCart()" class="absolute top-5 right-4 text-2xl">
-            ❌
-        </button>
+
+    </div>
+
+
+    </div>
+
+
+
+
+<div class="product">
+<img src="/ADV_DBMS/image/carhartt1.jpg" 
+    alt="Carhartt Tee" 
+    class="product-image aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80"
+    style="width: 100%; object-fit: cover;">
+
+<div class="mt-4 flex justify-between mr-4" style="display: flex; justify-content: space-between; padding: 10px;">
+<div class="ml-4">
+    <h3 class="text-sm font-bold text-gray-700 product-title">H&M</h3>
+    <p class="mt-1 text-sm text-black product-color">Black</p> 
+</div>
+<div>
+    <p class="text-sm text-gray-500 product-size">Large</p>
+    <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱599</p>
+</div>
+</div>
+
+<div class="ml-4 mt-2" style="padding: 10px;">
+<button onclick="addToCart(this)" 
+        style="background-color: black; color: white; padding: 8px 16px; border: none; border-radius: 8px;">
+    Add to Cart
+</button>
+</div>
+
     </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const addCartButtons = document.querySelectorAll(".add-to-cart");
-            const cartItemsContainer = document.getElementById("cart-items");
-            const cartTotalContainer = document.getElementById("cart-total");
-            let totalAmount = 0;
+        function addToCart(button) {
+        const product = button.closest('.product');
 
-            addCartButtons.forEach(button => {
-                button.addEventListener("click", (event) => {
-                    const productCard = event.target.closest("#product1");
-                    addToCart(productCard);
-                });
-            });
+        const name = product.querySelector('.product-title').textContent.trim();
+        const color = product.querySelector('.product-color').textContent.trim();
+        const size = product.querySelector('.product-size').textContent.trim();
+        const priceText = product.querySelector('.product-price').textContent.trim();
+        const image = product.querySelector('.product-image').getAttribute('src');
 
-            function addToCart(productCard) {
-                const productImage = productCard.querySelector("img").src;
-                const productName = productCard.querySelector(".product-title").textContent.trim();
-                const productColor = productCard.querySelector(".product-color").textContent.trim();
-                const productSize = productCard.querySelector(".product-size").textContent.trim();
-                const productPrice = productCard.querySelector(".product-price").textContent.trim().replace("₱", "");
+        const price = parseFloat(priceText.replace('₱', '').replace(',', ''));
+        
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-                // Create cart item
-                const cartItem = document.createElement("div");
-                cartItem.classList.add("cart-item", "flex", "justify-between", "items-center", "border-b", "py-2");
-                cartItem.innerHTML = `
-                    <img class="w-12 h-12 rounded mr-2" src="${productImage}" alt="${productName}">
-                    <div class="flex-1">
-                        <h3 class="text-sm font-semibold">${productName}</h3>
-                        <p class="text-xs text-gray-500">${productColor} | ${productSize}</p>
-                        <p class="text-sm font-medium text-gray-900">₱${productPrice}</p>
-                    </div>
-                    <button class="remove-item text-red-500">❌</button>
-                `;
+        const existing = cart.find(item => 
+            item.name === name && item.color === color && item.size === size
+        );
 
-                cartItemsContainer.appendChild(cartItem);
-                totalAmount += parseFloat(productPrice);
-                updateTotal();
+        if (existing) {
+            existing.quantity += 1;
+        } else {
+            cart.push({ name, color, size, price, image, quantity: 1 });
+        }
 
-                // Show cart when item is added
-                toggleCart();
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert(`${name} (${color}, ${size}) added to cart!`);
+        updateCartButtonCount();
+        }
 
-                // Remove item event
-                cartItem.querySelector(".remove-item").addEventListener("click", () => {
-                    cartItem.remove();
-                    totalAmount -= parseFloat(productPrice);
-                    updateTotal();
-                });
-            }
+        function updateCartButtonCount() {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+        document.getElementById('cart-count').textContent = count;
+        }
 
-            function updateTotal() {
-                cartTotalContainer.textContent = `₱${totalAmount.toFixed(2)}`;
-            }
-
-            // Toggle Cart Function
-            window.toggleCart = function() {
-                const cart = document.getElementById("cart");
-                cart.style.right = cart.style.right === "0px" ? "-100%" : "0px";
-            };
-        });
+        document.addEventListener('DOMContentLoaded', updateCartButtonCount);
     </script>
 
 </body>
