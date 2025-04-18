@@ -34,7 +34,7 @@
                         <div class="hidden sm:ml-6 sm:block">
                             <div class=" flex space-x-4">
                             <img src="/ADV_DBMS/image/R.png" alt="Logo" class="w-10 h-9">
-                            <p class="text-[#A98B72] font-bold text-3xl font-bevan">RETHRY</p> <p class="text-[#A98B72] font-bold text-2xl">|</p> <p class="text-[#A98B72] font-bold text-3xl pr-40 font-horizon">SHOPPING CART</p>
+                            <p class="text-[#A98B72] font-bold text-3xl font-horizon">RETHRY</p> <p class="text-[#A98B72] font-bold text-2xl">|</p> <p class="text-[#A98B72] font-bold text-3xl pr-40 font-horizon">SHOPPING CART</p>
                             <span class="pl-96">
                                 <a class="text-[#A98B72] hover:underline hover:text-[#B79C81] font-semibold text-xl font-bevan" href="index.php">← CONTINUE SHOPPING</a>
                             </span>
