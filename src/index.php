@@ -79,7 +79,7 @@ session_start();
                                     <p id="cart-count" class="bg-orange-500 text-white text-xs rounded-full flex items-center justify-center absolute top-7 left-[86%] px-1 py-[2px]">0</p>
                                     <button onclick="toggleUser()" class="p-3 ">
                                         <span>
-                                            <svg class="hover:scale-110 transition duration-500 text-gray-800 w-10 h-10"  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                            <svg class="hover:scale-110 transition duration-500 text-gray-800 w-11 h-11"  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                                             </svg>
                                         </span>
@@ -137,258 +137,206 @@ session_start();
                     -->
                     
                     <h2 class="text-2xl font-bold tracking-tight text-gray-900">T-shirt</h2>
-                    <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-                            <div  class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                            <img src="/ADV_DBMS/image/carhartt1.jpg" alt="Carhartt Tee" class="product-image aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80" style="width: 100%; object-fit: cover;">
+                        <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+                            <div class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                                <img src="/ADV_DBMS/image/carhartt1.jpg" alt="Carhartt Tee" class="product-image w-full aspect-square object-cover rounded-2xl bg-gray-200" />
                                 <div class="mt-4 flex justify-between mr-4">
                                     <div class="ml-4">
-                                    <h3 class="text-sm font-bold text-gray-700 product-title">Carhartt</h3>
-                                    <p class="mt-1 text-sm text-black product-color">Black</p> 
+                                        <h3 class="text-sm font-bold text-gray-700 product-title">Carhartt</h3>
+                                        <p class="mt-1 text-sm text-black product-color">Black</p>
                                     </div>
-                                        <div class="">
+                                    <div>
                                         <p class="text-sm text-gray-500 product-size">Large</p>
                                         <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱449</p>
-                                        </div>
+                                    </div>
                                 </div>
                                 <?php if($authenticated){ ?>
-                                    <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
+                                <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
                                 <?php } else { ?>
-                                    <button onclick="alert('Please login first before you order')"  class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
-                                <?php } ?>  
+                                <button onclick="alert('Please login first before you order')" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
+                                <?php } ?>
                             </div>
-                            
-                            <div  class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                            <img src="/ADV_DBMS/image/carhartt2.jpg" alt="Carhartt Tee" class="product-image aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80" style="width: 100%; object-fit: cover;">
+                                                    
+                            <div class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                                <img src="/ADV_DBMS/image/carhartt2.jpg" alt="Carhartt Tee"  class="product-image w-full aspect-square object-cover rounded-2xl bg-gray-200" />
                                 <div class="mt-4 flex justify-between mr-4">
                                     <div class="ml-4">
-                                    <h3 class="text-sm font-bold text-gray-700 product-title">Carhartt</h3>
-                                    <p class="mt-1 text-sm text-black product-color">Black</p> 
+                                        <h3 class="text-sm font-bold text-gray-700 product-title">Carhartt</h3>
+                                        <p class="mt-1 text-sm text-black product-color">Black</p>
                                     </div>
-                                        <div class="">
+                                    <div>
                                         <p class="text-sm text-gray-500 product-size">Small</p>
                                         <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱399</p>
-                                        </div>
-                                </div>
-                                <?php if($authenticated){ ?>
-                                    <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
-                                <?php } else { ?>
-                                    <button onclick="alert('Please login first before you order')"  class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
-                                <?php } ?>  
-                            </div>
-                                    
-                            <div  class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                            <img src="/ADV_DBMS/image/Adidas.jpg" alt="adidas Tee" class="product-image aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80" style="width: 100%; object-fit: cover;">
-                                <div class="mt-4 flex justify-between mr-4">
-                                    <div class="ml-4">
-                                    <h3 class="text-sm font-bold text-gray-700 product-title">Adidas</h3>
-                                    <p class="mt-1 text-sm text-black product-color">Black/White</p> 
                                     </div>
-                                        <div class="">
-                                        <p class="text-sm text-gray-500 product-size">Medium</p>
-                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱549</p>
-                                        </div>
                                 </div>
                                 <?php if($authenticated){ ?>
-                                    <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
+                                <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
                                 <?php } else { ?>
-                                    <button onclick="alert('Please login first before you order')"  class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
-                                <?php } ?>  
+                                <button onclick="alert('Please login first before you order')" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
+                                <?php } ?>
                             </div>
                             
-                            <div  class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                            <img src="/ADV_DBMS/image/crt.jpg" alt="crt Tee" class="product-image aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80" style="width: 100%; object-fit: cover;">
+                            <div class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                                <img src="/ADV_DBMS/image/internalreform.jpg" alt="Internal Reform Tee" class="product-image w-full aspect-square object-cover rounded-2xl bg-gray-200" />
                                 <div class="mt-4 flex justify-between mr-4">
                                     <div class="ml-4">
-                                    <h3 class="text-sm font-bold text-gray-700 product-title">CRT</h3>
-                                    <p class="mt-1 text-sm text-black product-color">Black/White</p> 
+                                        <h3 class="text-sm font-bold text-gray-700 product-title">Internal Reform</h3>
+                                        <p class="mt-1 text-sm text-black product-color">Khaki</p>
                                     </div>
-                                        <div class="">
-                                        <p class="text-sm text-gray-500 product-size">Small</p>
+                                    <div>
+                                        <p class="text-sm text-gray-500 product-size">Large</p>
                                         <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱499</p>
-                                        </div>
+                                    </div>
                                 </div>
                                 <?php if($authenticated){ ?>
-                                    <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
+                                <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
                                 <?php } else { ?>
-                                    <button onclick="alert('Please login first before you order')"  class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
-                                <?php } ?>  
+                                <button onclick="alert('Please login first before you order')" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
+                                <?php } ?>
                             </div>  
 
-                            <div  class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                            <img src="/ADV_DBMS/image/internalreform.jpg" alt="Internal Reform Tee" class="product-image aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80" style="width: 100%; object-fit: cover;">
+                            <div class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                                <img src="/ADV_DBMS/image/crt.jpg" alt="CRT Tee"
+                                    class="product-image w-full aspect-square object-cover rounded-2xl bg-gray-200" />
                                 <div class="mt-4 flex justify-between mr-4">
                                     <div class="ml-4">
-                                    <h3 class="text-sm font-bold text-gray-700 product-title">Internal Reform</h3>
-                                    <p class="mt-1 text-sm text-black product-color">Khaki</p> 
+                                        <h3 class="text-sm font-bold text-gray-700 product-title">CRT</h3>
+                                        <p class="mt-1 text-sm text-black product-color">White</p>
                                     </div>
-                                        <div class="">
-                                        <p class="text-sm text-gray-500 product-size">XL</p>
-                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱449</p>
-                                        </div>
-                                </div>
-                                <?php if($authenticated){ ?>
-                                    <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
-                                <?php } else { ?>
-                                    <button onclick="alert('Please login first before you order')"  class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
-                                <?php } ?>  
-                            </div>
-                            
-                            <div  class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                            <img src="/ADV_DBMS/image/Lemandik.jpg" alt="Lemandik  Tee" class="product-image aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80" style="width: 100%; object-fit: cover;">
-                                <div class="mt-4 flex justify-between mr-4">
-                                    <div class="ml-4">
-                                    <h3 class="text-sm font-bold text-gray-700 product-title">Lemandik</h3>
-                                    <p class="mt-1 text-sm text-black product-color">Gray</p> 
-                                    </div>
-                                        <div class="">
-                                        <p class="text-sm text-gray-500 product-size">XL</p>
-                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱499</p>
-                                        </div>
-                                </div>
-                                <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                </button>
-                            </div>
-                                    
-                            <div  class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                            <img src="/ADV_DBMS/image/star.jpg" alt="Star  Tee" class="product-image aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80" style="width: 100%; object-fit: cover;">
-                                <div class="mt-4 flex justify-between mr-4">
-                                    <div class="ml-4">
-                                    <h3 class="text-sm font-bold text-gray-700 product-title">Star</h3>
-                                    <p class="mt-1 text-sm text-black product-color">Navy Blue</p> 
-                                    </div>
-                                        <div class="">
+                                    <div>
                                         <p class="text-sm text-gray-500 product-size">Medium</p>
-                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱399</p>
-                                        </div>
+                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱450</p>
+                                    </div>
                                 </div>
                                 <?php if($authenticated){ ?>
-                                    <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
+                                <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
                                 <?php } else { ?>
-                                    <button onclick="alert('Please login first before you order')"  class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
-                                <?php } ?>  
-                            </div>
+                                <button onclick="alert('Please login first before you order')" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
+                                <?php } ?>
+                            </div> 
                             
-                            <div  class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                            <img src="/ADV_DBMS/image/teeluv.jpg" alt="TeeLuv  Tee" class="product-image aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80" style="width: 100%; object-fit: cover;">
+                            <div class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                                <img src="/ADV_DBMS/image/adidas.jpg" alt="Adidas Tee" class="product-image w-full aspect-square object-cover rounded-2xl bg-gray-200" />
                                 <div class="mt-4 flex justify-between mr-4">
                                     <div class="ml-4">
-                                    <h3 class="text-sm font-bold text-gray-700 product-title">TeeLuv</h3>
-                                    <p class="mt-1 text-sm text-black product-color">Khaki</p> 
+                                        <h3 class="text-sm font-bold text-gray-700 product-title">Adidas</h3>
+                                        <p class="mt-1 text-sm text-black product-color">Black</p>
                                     </div>
-                                        <div class="">
-                                        <p class="text-sm text-gray-500 product-size">Large</p>
-                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱359</p>
-                                        </div>
+                                    <div>
+                                        <p class="text-sm text-gray-500 product-size">Medium</p>
+                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱499</p>
+                                    </div>
                                 </div>
                                 <?php if($authenticated){ ?>
-                                    <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
+                                <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
                                 <?php } else { ?>
-                                    <button onclick="alert('Please login first before you order')"  class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
-                                <?php } ?>  
+                                <button onclick="alert('Please login first before you order')" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
+                                <?php } ?>
+                            </div>
+                                                    
+                            <div class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                                <img src="/ADV_DBMS/image/star.jpg" alt="Carhartt Tee"  class="product-image w-full aspect-square object-cover rounded-2xl bg-gray-200" />
+                                <div class="mt-4 flex justify-between mr-4">
+                                    <div class="ml-4">
+                                        <h3 class="text-sm font-bold text-gray-700 product-title">Carhartt</h3>
+                                        <p class="mt-1 text-sm text-black product-color">Black</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-500 product-size">Large</p>
+                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱349</p>
+                                    </div>
+                                </div>
+                                <?php if($authenticated){ ?>
+                                <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
+                                <?php } else { ?>
+                                <button onclick="alert('Please login first before you order')" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
+                                <?php } ?>
+                            </div>
+                            
+                            <div class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                                <img src="/ADV_DBMS/image/teeluv.jpg" alt=" Teeluv Tee" class="product-image w-full aspect-square object-cover rounded-2xl bg-gray-200" />
+                                <div class="mt-4 flex justify-between mr-4">
+                                    <div class="ml-4">
+                                        <h3 class="text-sm font-bold text-gray-700 product-title">Teeluv</h3>
+                                        <p class="mt-1 text-sm text-black product-color">Khaki</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-500 product-size">Large</p>
+                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱400</p>
+                                    </div>
+                                </div>
+                                <?php if($authenticated){ ?>
+                                <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
+                                <?php } else { ?>
+                                <button onclick="alert('Please login first before you order')" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
+                                <?php } ?>
+                            </div>  
+
+                            <div class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                                <img src="/ADV_DBMS/image/lemandik.jpg" alt="Lemandik Tee"  class="product-image w-full aspect-square object-cover rounded-2xl bg-gray-200" />
+                                <div class="mt-4 flex justify-between mr-4">
+                                    <div class="ml-4">
+                                        <h3 class="text-sm font-bold text-gray-700 product-title">Lemandik</h3>
+                                        <p class="mt-1 text-sm text-black product-color">Gray</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-500 product-size">Medium</p>
+                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱500</p>
+                                    </div>
+                                </div>
+                                <?php if($authenticated){ ?>
+                                <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
+                                <?php } else { ?>
+                                <button onclick="alert('Please login first before you order')" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
+                                <?php } ?>
                             </div>
                         </div>
                 
@@ -403,269 +351,206 @@ session_start();
                     <h1 class=" pt-5 pb-24 text-4xl font-bold tracking-tight text-gray-900"><section id="shorts">Latest Thrift</section></h1>
                     <h2 class="text-2xl font-bold tracking-tight text-gray-900">Shorts</h2>
 
-                        <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-                            <div  class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                            <img src="/ADV_DBMS/image/jorts1.jpg" alt="RRJ" class="product-image aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80" style="width: 100%; object-fit: cover;">
+                    <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+                            <div class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                                <img src="/ADV_DBMS/image/jorts1.jpg" alt="RRJ" class="product-image w-full aspect-square object-cover rounded-2xl bg-gray-200" />
                                 <div class="mt-4 flex justify-between mr-4">
                                     <div class="ml-4">
-                                    <h3 class="text-sm font-bold text-gray-700 product-title">RRJ</h3>
-                                    <p class="mt-1 text-sm text-black product-color">Blue</p> 
+                                        <h3 class="text-sm font-bold text-gray-700 product-title">RRJ</h3>
+                                        <p class="mt-1 text-sm text-black product-color">Blue</p>
                                     </div>
-                                        <div class="">
+                                    <div>
                                         <p class="text-sm text-gray-500 product-size">28-29</p>
                                         <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱349</p>
-                                        </div>
+                                    </div>
                                 </div>
                                 <?php if($authenticated){ ?>
-                                    <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
+                                <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
                                 <?php } else { ?>
-                                    <button onclick="alert('Please login first before you order')"  class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
-                                <?php } ?>  
+                                <button onclick="alert('Please login first before you order')" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
+                                <?php } ?>
                             </div>
-                            
-                            <div  class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                            <img src="/ADV_DBMS/image/jorts2.jpg" alt="Jag Jeans" class="product-image aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80" style="width: 100%; object-fit: cover;">
+                                                    
+                            <div class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                                <img src="/ADV_DBMS/image/jorts2.jpg" alt="Jag Jeans"  class="product-image w-full aspect-square object-cover rounded-2xl bg-gray-200" />
                                 <div class="mt-4 flex justify-between mr-4">
                                     <div class="ml-4">
-                                    <h3 class="text-sm font-bold text-gray-700 product-title">Jag Jeans</h3>
-                                    <p class="mt-1 text-sm text-black product-color">Denim Black</p> 
+                                        <h3 class="text-sm font-bold text-gray-700 product-title">Jag Jeans</h3>
+                                        <p class="mt-1 text-sm text-black product-color">Denim Black</p>
                                     </div>
-                                        <div class="">
+                                    <div>
                                         <p class="text-sm text-gray-500 product-size">30-32</p>
                                         <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱449</p>
-                                        </div>
-                                </div>
-                                <?php if($authenticated){ ?>
-                                    <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
-                                <?php } else { ?>
-                                    <button onclick="alert('Please login first before you order')"  class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
-                                <?php } ?>  
-                            </div>
-                                    
-                            <div  class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                            <img src="/ADV_DBMS/image/palda1.jpg" alt="Bench" class="product-image aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80" style="width: 100%; object-fit: cover;">
-                                <div class="mt-4 flex justify-between mr-4">
-                                    <div class="ml-4">
-                                    <h3 class="text-sm font-bold text-gray-700 product-title">Bench</h3>
-                                    <p class="mt-1 text-sm text-black product-color">Black/White</p> 
                                     </div>
-                                        <div class="">
-                                        <p class="text-sm text-gray-500 product-size">Medium</p>
-                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱549</p>
-                                        </div>
                                 </div>
                                 <?php if($authenticated){ ?>
-                                    <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
+                                <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
                                 <?php } else { ?>
-                                    <button onclick="alert('Please login first before you order')"  class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
-                                <?php } ?>  
+                                <button onclick="alert('Please login first before you order')" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
+                                <?php } ?>
                             </div>
                             
-                            <div  class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                            <img src="/ADV_DBMS/image/shorts.jpg" alt="Oxygen" class="product-image aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80" style="width: 100%; object-fit: cover;">
+                            <div class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                                <img src="/ADV_DBMS/image/palda1.jpg" alt="Bench" class="product-image w-full aspect-square object-cover rounded-2xl bg-gray-200" />
                                 <div class="mt-4 flex justify-between mr-4">
                                     <div class="ml-4">
-                                    <h3 class="text-sm font-bold text-gray-700 product-title">Oxygen</h3>
-                                    <p class="mt-1 text-sm text-black product-color">Aphricot</p> 
+                                        <h3 class="text-sm font-bold text-gray-700 product-title">Bench</h3>
+                                        <p class="mt-1 text-sm text-black product-color">Black/White</p>
                                     </div>
-                                        <div class="">
-                                        <p class="text-sm text-gray-500 product-size">30</p>
+                                    <div>
+                                        <p class="text-sm text-gray-500 product-size">27-28</p>
                                         <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱549</p>
-                                        </div>
+                                    </div>
                                 </div>
                                 <?php if($authenticated){ ?>
-                                    <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
+                                <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
                                 <?php } else { ?>
-                                    <button onclick="alert('Please login first before you order')"  class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
-                                <?php } ?>  
+                                <button onclick="alert('Please login first before you order')" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
+                                <?php } ?>
                             </div>  
 
-                            <div  class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                            <img src="/ADV_DBMS/image/jorts3.jpg" alt="Lee" class="product-image aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80" style="width: 100%; object-fit: cover;">
+                            <div class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                                <img src="/ADV_DBMS/image/Shorts.jpg" alt="Oxygen"
+                                    class="product-image w-full aspect-square object-cover rounded-2xl bg-gray-200" />
                                 <div class="mt-4 flex justify-between mr-4">
                                     <div class="ml-4">
-                                    <h3 class="text-sm font-bold text-gray-700 product-title">Lee</h3>
-                                    <p class="mt-1 text-sm text-black product-color">Black</p> 
+                                        <h3 class="text-sm font-bold text-gray-700 product-title">Oxygen</h3>
+                                        <p class="mt-1 text-sm text-black product-color">Aphricot</p>
                                     </div>
-                                        <div class="">
-                                        <p class="text-sm text-gray-500 product-size">33</p>
-                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱449</p>
-                                        </div>
+                                    <div>
+                                        <p class="text-sm text-gray-500 product-size">30-32</p>
+                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱550</p>
+                                    </div>
                                 </div>
                                 <?php if($authenticated){ ?>
-                                    <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
+                                <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
                                 <?php } else { ?>
-                                    <button onclick="alert('Please login first before you order')"  class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
-                                <?php } ?>  
+                                <button onclick="alert('Please login first before you order')" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
+                                <?php } ?>
+                            </div> 
+                            
+                            <div class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                                <img src="/ADV_DBMS/image/jorts3.jpg" alt="Lee " class="product-image w-full aspect-square object-cover rounded-2xl bg-gray-200" />
+                                <div class="mt-4 flex justify-between mr-4">
+                                    <div class="ml-4">
+                                        <h3 class="text-sm font-bold text-gray-700 product-title">Lee</h3>
+                                        <p class="mt-1 text-sm text-black product-color">Black</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-500 product-size">30</p>
+                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱459</p>
+                                    </div>
+                                </div>
+                                <?php if($authenticated){ ?>
+                                <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
+                                <?php } else { ?>
+                                <button onclick="alert('Please login first before you order')" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
+                                <?php } ?>
+                            </div>
+                                                    
+                            <div class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                                <img src="/ADV_DBMS/image/jorts4.jpg" alt="Levi's"  class="product-image w-full aspect-square object-cover rounded-2xl bg-gray-200" />
+                                <div class="mt-4 flex justify-between mr-4">
+                                    <div class="ml-4">
+                                        <h3 class="text-sm font-bold text-gray-700 product-title">Levi's</h3>
+                                        <p class="mt-1 text-sm text-black product-color">Light Wash</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-500 product-size">28</p>
+                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱349</p>
+                                    </div>
+                                </div>
+                                <?php if($authenticated){ ?>
+                                <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
+                                <?php } else { ?>
+                                <button onclick="alert('Please login first before you order')" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
+                                <?php } ?>
                             </div>
                             
-                            <div  class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                            <img src="/ADV_DBMS/image/jorts4.jpg" alt="Levi's " class="product-image aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80" style="width: 100%; object-fit: cover;">
+                            <div class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                                <img src="/ADV_DBMS/image/palda2.jpg" alt="Cotton On" class="product-image w-full aspect-square object-cover rounded-2xl bg-gray-200" />
                                 <div class="mt-4 flex justify-between mr-4">
                                     <div class="ml-4">
-                                    <h3 class="text-sm font-bold text-gray-700 product-title">Levi's</h3>
-                                    <p class="mt-1 text-sm text-black product-color">Light Wash</p> 
+                                        <h3 class="text-sm font-bold text-gray-700 product-title">Cotton On</h3>
+                                        <p class="mt-1 text-sm text-black product-color">Light Blue</p>
                                     </div>
-                                        <div class="">
-                                        <p class="text-sm text-gray-500 product-size">28</p>
-                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱399</p>
-                                        </div>
-                                </div>
-                                <?php if($authenticated){ ?>
-                                    <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
-                                <?php } else { ?>
-                                    <button onclick="alert('Please login first before you order')"  class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
-                                <?php } ?>  
-                            </div>
-                                    
-                            <div  class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                            <img src="/ADV_DBMS/image/palda2.jpg" alt="Cotton On" class="product-image aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80" style="width: 100%; object-fit: cover;">
-                                <div class="mt-4 flex justify-between mr-4">
-                                    <div class="ml-4">
-                                    <h3 class="text-sm font-bold text-gray-700 product-title">Cotton On</h3>
-                                    <p class="mt-1 text-sm text-black product-color">Light Blue</p> 
-                                    </div>
-                                        <div class="">
+                                    <div>
                                         <p class="text-sm text-gray-500 product-size">29</p>
                                         <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱499</p>
-                                        </div>
+                                    </div>
                                 </div>
                                 <?php if($authenticated){ ?>
-                                    <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
+                                <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
                                 <?php } else { ?>
-                                    <button onclick="alert('Please login first before you order')"  class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
-                                <?php } ?>  
-                            </div>
-                            
-                            <div  class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                            <img src="/ADV_DBMS/image/jorts5.jpg" alt="H&M" class="product-image aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80" style="width: 100%; object-fit: cover;">
+                                <button onclick="alert('Please login first before you order')" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
+                                <?php } ?>
+                            </div>  
+
+                            <div class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                                <img src="/ADV_DBMS/image/jorts5.jpg" alt="Lemandik Tee"  class="product-image w-full aspect-square object-cover rounded-2xl bg-gray-200" />
                                 <div class="mt-4 flex justify-between mr-4">
                                     <div class="ml-4">
-                                    <h3 class="text-sm font-bold text-gray-700 product-title">H&M</h3>
-                                    <p class="mt-1 text-sm text-black product-color">Deep Blue</p> 
+                                        <h3 class="text-sm font-bold text-gray-700 product-title">H&M</h3>
+                                        <p class="mt-1 text-sm text-black product-color">Deep Blue</p>
                                     </div>
-                                        <div class="">
+                                    <div>
                                         <p class="text-sm text-gray-500 product-size">34</p>
-                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱549</p>
-                                        </div>
+                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱550</p>
+                                    </div>
                                 </div>
                                 <?php if($authenticated){ ?>
-                                    <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
+                                <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
                                 <?php } else { ?>
-                                    <button onclick="alert('Please login first before you order')"  class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
-                                <?php } ?>  
+                                <button onclick="alert('Please login first before you order')" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
+                                <?php } ?>
                             </div>
                         </div>
                         
@@ -681,269 +566,205 @@ session_start();
                         <h3 class=" pt-5 pb-24 text-4xl font-bold tracking-tight text-gray-900"><section id="shoes">Latest Thrift</section></h1>        
                         <h2 class="text-2xl font-bold tracking-tight text-gray-900">Shoes</h2>
 
-                        <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-                            <div  class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                            <img src="/ADV_DBMS/image/AF1.jpg" alt="AF1" class="product-image aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80" style="width: 100%; object-fit: cover;">
+                    <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+                            <div class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                                <img src="/ADV_DBMS/image/AF1.jpg" alt="Air Force 1" class="product-image w-full aspect-square object-cover rounded-2xl bg-gray-200" />
                                 <div class="mt-4 flex justify-between mr-4">
                                     <div class="ml-4">
-                                    <h3 class="text-sm font-bold text-gray-700 product-title">Air Force 1</h3>
-                                    <p class="mt-1 text-sm text-black product-color">Triple White</p> 
+                                        <h3 class="text-sm font-bold text-gray-700 product-title">Air Force 1</h3>
+                                        <p class="mt-1 text-sm text-black product-color">Triple White</p>
                                     </div>
-                                        <div class="">
+                                    <div>
                                         <p class="text-sm text-gray-500 product-size">42</p>
                                         <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱999</p>
-                                        </div>
+                                    </div>
                                 </div>
                                 <?php if($authenticated){ ?>
-                                    <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
+                                <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
                                 <?php } else { ?>
-                                    <button onclick="alert('Please login first before you order')"  class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
-                                <?php } ?>  
+                                <button onclick="alert('Please login first before you order')" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
+                                <?php } ?>
                             </div>
-                            
-                            <div  class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                            <img src="/ADV_DBMS/image/altra.jpg" alt="Altra" class="product-image aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80" style="width: 100%; object-fit: cover;">
+                                                    
+                            <div class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                                <img src="/ADV_DBMS/image/altra.jpg" alt="Altra"  class="product-image w-full aspect-square object-cover rounded-2xl bg-gray-200" />
                                 <div class="mt-4 flex justify-between mr-4">
                                     <div class="ml-4">
-                                    <h3 class="text-sm font-bold text-gray-700 product-title">Altra</h3>
-                                    <p class="mt-1 text-sm text-black product-color">White</p> 
+                                        <h3 class="text-sm font-bold text-gray-700 product-title">Altra</h3>
+                                        <p class="mt-1 text-sm text-black product-color">White</p>
                                     </div>
-                                        <div class="">
+                                    <div>
                                         <p class="text-sm text-gray-500 product-size">43</p>
-                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱850</p>
-                                        </div>
-                                </div>
-                                <?php if($authenticated){ ?>
-                                    <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
-                                <?php } else { ?>
-                                    <button onclick="alert('Please login first before you order')"  class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
-                                <?php } ?>  
-                            </div>
-                                    
-                            <div  class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                            <img src="/ADV_DBMS/image/clogs.jpg" alt="Birkenstock Clogs" class="product-image aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80" style="width: 100%; object-fit: cover;">
-                                <div class="mt-4 flex justify-between mr-4">
-                                    <div class="ml-4">
-                                    <h3 class="text-sm font-bold text-gray-700 product-title">Birkenstock Clogs</h3>
-                                    <p class="mt-1 text-sm text-black product-color">Brown</p> 
+                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱849</p>
                                     </div>
-                                        <div class="">
-                                        <p class="text-sm text-gray-500 product-size">42</p>
-                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱950</p>
-                                        </div>
                                 </div>
                                 <?php if($authenticated){ ?>
-                                    <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
+                                <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
                                 <?php } else { ?>
-                                    <button onclick="alert('Please login first before you order')"  class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
-                                <?php } ?>  
+                                <button onclick="alert('Please login first before you order')" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
+                                <?php } ?>
                             </div>
                             
-                            <div  class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                            <img src="/ADV_DBMS/image/converse.jpg" alt="Converse" class="product-image aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80" style="width: 100%; object-fit: cover;">
+                            <div class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                                <img src="/ADV_DBMS/image/clogs.jpg" alt="Birkenstock Clogs" class="product-image w-full aspect-square object-cover rounded-2xl bg-gray-200" />
                                 <div class="mt-4 flex justify-between mr-4">
                                     <div class="ml-4">
-                                    <h3 class="text-sm font-bold text-gray-700 product-title">Converse</h3>
-                                    <p class="mt-1 text-sm text-black product-color">Black</p> 
+                                        <h3 class="text-sm font-bold text-gray-700 product-title">Birkenstock Clogs</h3>
+                                        <p class="mt-1 text-sm text-black product-color">Browm</p>
                                     </div>
-                                        <div class="">
-                                        <p class="text-sm text-gray-500 product-size">45</p>
-                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱1150</p>
-                                        </div>
+                                    <div>
+                                        <p class="text-sm text-gray-500 product-size">42</p>
+                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱949</p>
+                                    </div>
                                 </div>
                                 <?php if($authenticated){ ?>
-                                    <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
+                                <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
                                 <?php } else { ?>
-                                    <button onclick="alert('Please login first before you order')"  class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
-                                <?php } ?>  
+                                <button onclick="alert('Please login first before you order')" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
+                                <?php } ?>
                             </div>  
 
-                            <div  class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                            <img src="/ADV_DBMS/image/DR.M.jpg" alt="Dr.Martens" class="product-image aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80" style="width: 100%; object-fit: cover;">
+                            <div class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                                <img src="/ADV_DBMS/image/campus.jpg" alt="Adidas Campus"  class="product-image w-full aspect-square object-cover rounded-2xl bg-gray-200" />
                                 <div class="mt-4 flex justify-between mr-4">
                                     <div class="ml-4">
-                                    <h3 class="text-sm font-bold text-gray-700 product-title">Dr.Martens</h3>
-                                    <p class="mt-1 text-sm text-black product-color">Brown</p> 
+                                        <h3 class="text-sm font-bold text-gray-700 product-title">Adidas Campus</h3>
+                                        <p class="mt-1 text-sm text-black product-color">White</p>
                                     </div>
-                                        <div class="">
+                                    <div>
+                                        <p class="text-sm text-gray-500 product-size">43</p>
+                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱1000</p>
+                                    </div>
+                                </div>
+                                <?php if($authenticated){ ?>
+                                <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
+                                <?php } else { ?>
+                                <button onclick="alert('Please login first before you order')" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
+                                <?php } ?>
+                            </div> 
+                            
+                            <div class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                                <img src="/ADV_DBMS/image/DR.M.jpg" alt="Dr.Martens " class="product-image w-full aspect-square object-cover rounded-2xl bg-gray-200" />
+                                <div class="mt-4 flex justify-between mr-4">
+                                    <div class="ml-4">
+                                        <h3 class="text-sm font-bold text-gray-700 product-title">Dr.Martens</h3>
+                                        <p class="mt-1 text-sm text-black product-color">Brown</p>
+                                    </div>
+                                    <div>
                                         <p class="text-sm text-gray-500 product-size">44</p>
                                         <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱1200</p>
-                                        </div>
+                                    </div>
                                 </div>
                                 <?php if($authenticated){ ?>
-                                    <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
+                                <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
                                 <?php } else { ?>
-                                    <button onclick="alert('Please login first before you order')"  class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
-                                <?php } ?>  
+                                <button onclick="alert('Please login first before you order')" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
+                                <?php } ?>
+                            </div>
+                                                    
+                            <div class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                                <img src="/ADV_DBMS/image/newb.jpg" alt="New Balance 530"  class="product-image w-full aspect-square object-cover rounded-2xl bg-gray-200" />
+                                <div class="mt-4 flex justify-between mr-4">
+                                    <div class="ml-4">
+                                        <h3 class="text-sm font-bold text-gray-700 product-title">New Balance 530</h3>
+                                        <p class="mt-1 text-sm text-black product-color">White</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-500 product-size">40</p>
+                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱949</p>
+                                    </div>
+                                </div>
+                                <?php if($authenticated){ ?>
+                                <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
+                                <?php } else { ?>
+                                <button onclick="alert('Please login first before you order')" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
+                                <?php } ?>
                             </div>
                             
-                            <div  class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                            <img src="/ADV_DBMS/image/newb.jpg" alt="New Balance 530" class="product-image aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80" style="width: 100%; object-fit: cover;">
+                            <div class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                                <img src="/ADV_DBMS/image/converse1.jpg" alt="Converse" class="product-image w-full aspect-square object-cover rounded-2xl bg-gray-200" />
                                 <div class="mt-4 flex justify-between mr-4">
                                     <div class="ml-4">
-                                    <h3 class="text-sm font-bold text-gray-700 product-title">New Balance 530</h3>
-                                    <p class="mt-1 text-sm text-black product-color">White</p> 
+                                        <h3 class="text-sm font-bold text-gray-700 product-title">Converse</h3>
+                                        <p class="mt-1 text-sm text-black product-color">White</p>
                                     </div>
-                                        <div class="">
-                                        <p class="text-sm text-gray-500 product-size">40-42</p>
-                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱900</p>
-                                        </div>
-                                </div>
-                                <?php if($authenticated){ ?>
-                                    <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
-                                <?php } else { ?>
-                                    <button onclick="alert('Please login first before you order')"  class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
-                                <?php } ?>  
-                            </div>
-                                    
-                            <div  class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                            <img src="/ADV_DBMS/image/converse1.jpg" alt=Converse" class="product-image aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80" style="width: 100%; object-fit: cover;">
-                                <div class="mt-4 flex justify-between mr-4">
-                                    <div class="ml-4">
-                                    <h3 class="text-sm font-bold text-gray-700 product-title">Converse</h3>
-                                    <p class="mt-1 text-sm text-black product-color">White/Black</p> 
-                                    </div>
-                                        <div class="">
+                                    <div>
                                         <p class="text-sm text-gray-500 product-size">44</p>
-                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱850</p>
-                                        </div>
+                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱899</p>
+                                    </div>
                                 </div>
                                 <?php if($authenticated){ ?>
-                                    <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
+                                <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
                                 <?php } else { ?>
-                                    <button onclick="alert('Please login first before you order')"  class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
-                                <?php } ?>  
-                            </div>
-                            
-                            <div  class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
-                            <img src="/ADV_DBMS/image/travis.jpg" alt="Travis Scott " class="product-image aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80" style="width: 100%; object-fit: cover;">
+                                <button onclick="alert('Please login first before you order')" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
+                                <?php } ?>
+                            </div>  
+
+                            <div class="product hover:scale-100 transition duration-250 hover:shadow-2xl border-2 bg-white border-gray-300 rounded-2xl shadow-sm mt-4 mx-4 mb-4 p-4">
+                                <img src="/ADV_DBMS/image/travis.jpg" alt="Lemandik Tee"  class="product-image w-full aspect-square object-cover rounded-2xl bg-gray-200" />
                                 <div class="mt-4 flex justify-between mr-4">
                                     <div class="ml-4">
-                                    <h3 class="text-sm font-bold text-gray-700 product-title">Travis Scott</h3>
-                                    <p class="mt-1 text-sm text-black product-color">Triple Black</p> 
+                                        <h3 class="text-sm font-bold text-gray-700 product-title">Travis Scott</h3>
+                                        <p class="mt-1 text-sm text-black product-color">Triple Black</p>
                                     </div>
-                                        <div class="">
+                                    <div>
                                         <p class="text-sm text-gray-500 product-size">45</p>
-                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱2500</p>
-                                        </div>
+                                        <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱2550</p>
+                                    </div>
                                 </div>
                                 <?php if($authenticated){ ?>
-                                    <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
+                                <button onclick="addToCart(this)" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
                                 <?php } else { ?>
-                                    <button onclick="alert('Please login first before you order')"  class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative" >
-                                        <svg class="size-7 ml-7 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                        </svg>
-                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">
-                                            Add To Cart
-                                        </span>
-                                    </button>
-                                <?php } ?>  
+                                <button onclick="alert('Please login first before you order')" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-2xl hover:bg-orange-400 w-full add-to-cart relative">
+                                        <i class="fa-solid fa-cart-plus text-2xl top-1 absolute left-12"></i>
+                                        <span class="ml-8 flex items-center justify-center text-sm font-bold text-white">Add To Cart</span>
+                                </button>
+                                <?php } ?>
                             </div>
                         </div>
 
@@ -998,17 +819,78 @@ session_start();
                     <div class="grid grid-cols-3 gap-4 p-6">
                         <div>
                             <h5 class="mr-20 ml-40 text-l font-bold tracking-tight text-gray-900"><section id="about">ABOUT THRIFT SHOP</section></h5>
-                            <span class="mr-20 ml-40 text-l tracking-tight text-gray-900">
+                        <!--   <span class="mr-20 ml-40 text-l tracking-tight text-gray-900">
                                 <pre>
         RETHRY is a modern thrift shop wher
         you handpick pieces and turn them
         into your own perfect 
-                                </pre>                 
+                                </pre> 
+                                
+                            </span> -->
+                            <br>
+                            <span class="ml-40 mb-20 hover:scale-110 transition duration-500 hover:text-yellow-400">
+                                <a href="about.php" title="About Us" target="_blank">
+                                    About Us
+                                </a>
+                            </span>
+                            <br>
+                            <span class="ml-40 mb-20 hover:scale-110 transition duration-500 hover:text-yellow-400">
+                                <a href="" title="Privacy & Policy" target="_blank">
+                                    Privacy & Policy
+                                </a> 
                             </span>
                         </div>
 
                         <div>
                             <h5 class=" ml-30 text-l text-center font-bold tracking-tight text-gray-900">CUSTOMER SERVICE</h5>
+                            <br>
+                            <span class="ml-40 mb-20 hover:scale-110 transition duration-500 hover:text-yellow-400">
+                                <a href="" title="Contact" target="_blank">
+                                Contact Us
+                                </a>
+                            </span>
+                            <br>
+                            <span class="ml-40 mb-20 hover:scale-110 transition duration-500 hover:text-yellow-400">
+                                <a href="" title="Logout" target="_blank">
+                                Payment Methods
+                                </a>
+                            </span>
+                            <br>
+                            <span class="ml-40 mb-20 hover:scale-110 transition duration-500 hover:text-yellow-400">
+                                <a href="" title="Shipping" target="_blank">
+                                Free Shipping
+                                </a>
+                            </span>
+                            <br>
+                            <span class="ml-40 mb-20 hover:scale-110 transition duration-500 hover:text-yellow-400">
+                                <a href="" title="Return" target="_blank">
+                                Return & Refund
+                                </a>
+                            </span>
+                            <br>
+                            <span class="ml-40 mb-20 hover:scale-110 transition duration-500 hover:text-yellow-400">
+                                <a href="" title="Cart" target="_blank">
+                                Help Centre
+                                </a>
+                            </span>
+                            <br>
+                            <span class="ml-40 mb-20 hover:scale-110 transition duration-500 hover:text-yellow-400">
+                                <a href="" title="Order" target="_blank">
+                                Order Tracking
+                                </a>
+                            </span>
+                            <br>
+                            <span class="ml-40 mb-20 hover:scale-110 transition duration-500 hover:text-yellow-400">
+                                <a href="log_in.php" title="Login" target="_blank">
+                                Login
+                                </a>
+                            </span>
+                            <br>
+                            <span class="ml-40 mb-20 hover:scale-110 transition duration-500 hover:text-yellow-400">
+                                <a href="sign_up.php" title="Register" target="_blank">
+                                Register
+                                </a>
+                            </span>                            
                         </div>
 
 
@@ -1048,11 +930,10 @@ session_start();
                     </div>
 
                     
-            <div class="mt-auto bg-gray-800 text-white text-center py-4">
+            <div class="mt-auto bg-[#A98B72] text-white text-center py-4">
                 &copy; 2025 RETHRY. All Rights Reserved. |
                 <a href="#" class="text-yellow-400 hover:underline mx-2">Terms of Service</a> |
                 <a href="#" class="text-yellow-400 hover:underline mx-2">FAQs</a> |
-                <a href="#" class="text-yellow-400 hover:underline mx-2">Privacy & Policy</a> |
                 <a href="#" class="text-yellow-400 hover:underline mx-2">Philippines</a> |
             </div>
             

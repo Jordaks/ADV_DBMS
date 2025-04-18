@@ -129,7 +129,7 @@
                     </div>
 
                     
-            <div class="mt-auto bg-gray-800 text-white text-center py-4">
+            <div class="mt-auto bg-[#A98B72] text-white text-center py-4">
                 &copy; 2025 RETHRY. All Rights Reserved. |
                 <a href="#" class="text-yellow-400 hover:underline mx-2">Terms of Service</a> |
                 <a href="#" class="text-yellow-400 hover:underline mx-2">FAQs</a> |
