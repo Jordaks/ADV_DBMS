@@ -23,6 +23,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/png" href="/ADV_DBMS/image/R.png"/>
 
+    <style>
+        html {
+        scroll-behavior: smooth;
+        }
+    </style>
 
 </head>
 <?php
@@ -38,11 +43,11 @@ session_start();
                         <div class="hidden sm:ml-6 sm:block">
                             <div class=" flex space-x-4">
                             <img src="/ADV_DBMS/image/R.png" alt="Logo" class="w-10 h-9">
-                            <a href="#" class="active hover:scale-110 hover:text-white hover:bg-gray-700 transition duration-500 rounded-md px-3 py-2 text-sm font-bold text-black">Home</a>
-                            <a href="#t-shirt" class="hover:scale-110 transition duration-500 rounded-md px-3 py-2 text-sm  font-bold text-black hover:bg-gray-700 hover:text-white">T-shirt</a>
-                            <a href="#shorts" class="hover:scale-110 transition duration-500 rounded-md px-3 py-2 text-sm font-bold text-black hover:bg-gray-700 hover:text-white">Shorts</a>
-                            <a href="#shoes" class="hover:scale-110 transition duration-500 rounded-md px-3 py-2 text-sm font-bold text-black hover:bg-gray-700 hover:text-white">Shoes</a>
-                            <a href="#about" class="hover:scale-110 transition duration-500 rounded-md px-3 py-2 text-sm font-bold text-black hover:bg-gray-700 hover:text-white">About</a>
+                            <a href="#" class="nav-link active hover:scale-110 hover:text-white hover:bg-gray-700 transition duration-500 rounded-md px-3 py-2 text-sm font-bold text-black">Home</a>
+                            <a href="#t-shirt" class="nav-link hover:scale-110 transition duration-500 rounded-md px-3 py-2 text-sm  font-bold text-black hover:bg-gray-700 hover:text-white">T-shirt</a>
+                            <a href="#shorts" class="nav-link hover:scale-110 transition duration-500 rounded-md px-3 py-2 text-sm font-bold text-black hover:bg-gray-700 hover:text-white">Shorts</a>
+                            <a href="#shoes" class="nav-link hover:scale-110 transition duration-500 rounded-md px-3 py-2 text-sm font-bold text-black hover:bg-gray-700 hover:text-white">Shoes</a>
+                            <a href="#about" class="nav-link hover:scale-110 transition duration-500 rounded-md px-3 py-2 text-sm font-bold text-black hover:bg-gray-700 hover:text-white">About</a>
                             </div>
                         </div>
                     </div>
@@ -90,7 +95,7 @@ session_start();
                                 <?php } else { ?>  
                                     <div class="hover:scale-110 transition duration-500 relative ml-3 border-2 rounded-xl border-black bg-white hover:border-gray-500">
                                         <a href="log_in.php" target="">
-                                            <button type="button" class="ml-1.5 mr-1.5  hover:scale-110 transition duration-500 relative rounded-full p-1 text-black hover:text-gray-500 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden font-bold"> LOG IN
+                                            <button type="button" class="ml-1.5 mr-1.5  hover:scale-110 transition duration-500 relative rounded-full p-1  text-black hover:text-gray-500 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden font-bold"> LOG IN
                                                 <span class="absolute -inset-1.5"></span>
                                             </button>
                                         </a>
@@ -127,7 +132,9 @@ session_start();
 
             <div class="bg-orange-50">
                 <h1 class="ml-24 pt-5 text-4xl pl-2 font-bold tracking-tight text-gray-900"><section id="t-shirt">Latest Thrift</section></h1>
+            
                 <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+                
 
 
                     <!--
@@ -828,13 +835,13 @@ session_start();
                                 
                             </span> -->
                             <br>
-                            <span class="ml-40 mb-20 hover:scale-110 transition duration-500 hover:text-yellow-400">
+                            <span class="ml-44 mb-20 hover:scale-110 transition duration-500 hover:text-yellow-400">
                                 <a href="about.php" title="About Us" target="_blank">
                                     About Us
                                 </a>
                             </span>
                             <br>
-                            <span class="ml-40 mb-20 hover:scale-110 transition duration-500 hover:text-yellow-400">
+                            <span class="ml-44 mb-20 hover:scale-110 transition duration-500 hover:text-yellow-400">
                                 <a href="" title="Privacy & Policy" target="_blank">
                                     Privacy & Policy
                                 </a> 
@@ -981,6 +988,36 @@ session_start();
             const user = document.getElementById("user");
             user.style.right = user.style.right === "0px" ? "-100%" : "0px";
         };
+
+
+        // animation
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            function setActive(link) {
+                navLinks.forEach(el => el.classList.remove('bg-gray-700', 'text-white'));
+                link.classList.add('bg-gray-700', 'text-white', );
+            }
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    setActive(this);
+                });
+            });
+
+            window.addEventListener('scroll', () => {
+                const scrollY = window.scrollY + 150;
+                navLinks.forEach(link => {
+                    const section = document.querySelector(link.getAttribute('href'));
+                    if (section.offsetTop <= scrollY && section.offsetTop + section.offsetHeight > scrollY) {
+                    setActive(link);
+                    }
+                });
+            });
+        });
+
+        
 
         </script>
     </body>

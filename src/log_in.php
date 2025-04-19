@@ -49,7 +49,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/png" href="/ADV_DBMS/image/R.png"/>
     <link href="https://fonts.googleapis.com/css2?family=Horizon&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Log In</title>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body class="bg-orange-50">
 
@@ -59,8 +66,8 @@
                         <div class="hidden sm:ml-6 sm:block">
                             <div class=" flex space-x-4">
                             <img src="/ADV_DBMS/image/R.png" alt="Logo" class="w-10 mr-10 h-9">
-                            <a href="index.php" class="active hover:scale-110 hover:text-white hover:bg-gray-700 transition duration-500 rounded-md px-3 py-2 text-sm font-bold text-black">Home</a>
-                            <a href="#about" class="hover:scale-110 transition duration-500 rounded-md px-3 py-2 text-sm font-bold text-black hover:bg-gray-700 hover:text-white">About</a>
+                            <a href="index.php" class="nav-link active hover:scale-110 hover:text-white hover:bg-gray-700 transition duration-500 rounded-md px-3 py-2 text-sm font-bold text-black">Home</a>
+                            <a href="#about" class="nav-link hover:scale-110 transition duration-500 rounded-md px-3 py-2 text-sm font-bold text-black hover:bg-gray-700 hover:text-white">About</a>    
                             </div>
                         </div>
                     </div>
@@ -166,13 +173,13 @@
                                 
                             </span> -->
                             <br>
-                            <span class="ml-40 mb-20 hover:scale-110 transition duration-500 hover:text-yellow-400">
+                            <span class="ml-44 mb-20 hover:scale-110 transition duration-500 hover:text-yellow-400">
                                 <a href="about.php" title="About Us" target="_blank">
                                     About Us
                                 </a>
                             </span>
                             <br>
-                            <span class="ml-40 mb-20 hover:scale-110 transition duration-500 hover:text-yellow-400">
+                            <span class="ml-44 mb-20 hover:scale-110 transition duration-500 hover:text-yellow-400">
                                 <a href="" title="Privacy & Policy" target="_blank">
                                     Privacy & Policy
                                 </a> 
@@ -276,5 +283,33 @@
             </div>
             
         </footer>
+
+        <script>
+                    // animation
+
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        function setActive(link) {
+        navLinks.forEach(el => el.classList.remove('bg-gray-700', 'text-white'));
+        link.classList.add('bg-gray-700', 'text-white', );
+        }
+
+        navLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            setActive(this);
+        });
+        });
+
+        window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY + 150;
+        navLinks.forEach(link => {
+            const section = document.querySelector(link.getAttribute('href'));
+            if (section.offsetTop <= scrollY && section.offsetTop + section.offsetHeight > scrollY) {
+            setActive(link);
+            }
+        });
+        });
+
+        </script>
 </body>
 </html>

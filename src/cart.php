@@ -79,17 +79,78 @@
                     <div class="grid grid-cols-3 gap-4 p-6">
                         <div>
                             <h5 class="mr-20 ml-40 text-l font-bold tracking-tight text-gray-900"><section id="about">ABOUT THRIFT SHOP</section></h5>
-                            <span class="mr-20 ml-40 text-l tracking-tight text-gray-900">
+                        <!--   <span class="mr-20 ml-40 text-l tracking-tight text-gray-900">
                                 <pre>
         RETHRY is a modern thrift shop wher
         you handpick pieces and turn them
         into your own perfect 
-                                </pre>                 
+                                </pre> 
+                                
+                            </span> -->
+                            <br>
+                            <span class="ml-44 mb-20 hover:scale-110 transition duration-500 hover:text-yellow-400">
+                                <a href="about.php" title="About Us" target="_blank">
+                                    About Us
+                                </a>
+                            </span>
+                            <br>
+                            <span class="ml-44 mb-20 hover:scale-110 transition duration-500 hover:text-yellow-400">
+                                <a href="" title="Privacy & Policy" target="_blank">
+                                    Privacy & Policy
+                                </a> 
                             </span>
                         </div>
 
                         <div>
                             <h5 class=" ml-30 text-l text-center font-bold tracking-tight text-gray-900">CUSTOMER SERVICE</h5>
+                            <br>
+                            <span class="ml-40 mb-20 hover:scale-110 transition duration-500 hover:text-yellow-400">
+                                <a href="" title="Contact" target="_blank">
+                                Contact Us
+                                </a>
+                            </span>
+                            <br>
+                            <span class="ml-40 mb-20 hover:scale-110 transition duration-500 hover:text-yellow-400">
+                                <a href="" title="Logout" target="_blank">
+                                Payment Methods
+                                </a>
+                            </span>
+                            <br>
+                            <span class="ml-40 mb-20 hover:scale-110 transition duration-500 hover:text-yellow-400">
+                                <a href="" title="Shipping" target="_blank">
+                                Free Shipping
+                                </a>
+                            </span>
+                            <br>
+                            <span class="ml-40 mb-20 hover:scale-110 transition duration-500 hover:text-yellow-400">
+                                <a href="" title="Return" target="_blank">
+                                Return & Refund
+                                </a>
+                            </span>
+                            <br>
+                            <span class="ml-40 mb-20 hover:scale-110 transition duration-500 hover:text-yellow-400">
+                                <a href="" title="Cart" target="_blank">
+                                Help Centre
+                                </a>
+                            </span>
+                            <br>
+                            <span class="ml-40 mb-20 hover:scale-110 transition duration-500 hover:text-yellow-400">
+                                <a href="" title="Order" target="_blank">
+                                Order Tracking
+                                </a>
+                            </span>
+                            <br>
+                            <span class="ml-40 mb-20 hover:scale-110 transition duration-500 hover:text-yellow-400">
+                                <a href="log_in.php" title="Login" target="_blank">
+                                Login
+                                </a>
+                            </span>
+                            <br>
+                            <span class="ml-40 mb-20 hover:scale-110 transition duration-500 hover:text-yellow-400">
+                                <a href="sign_up.php" title="Register" target="_blank">
+                                Register
+                                </a>
+                            </span>                            
                         </div>
 
 
@@ -115,7 +176,7 @@
                             </span>
                             <br>
                             <span class="ml-44 mb-20 hover:scale-110 transition duration-500 hover:text-yellow-400"  >
-                                <a href="https://www.linkedin.com/in/mark-jordan-javier-29b72935a/" title="Mark Jordan Javier target="_blank">
+                                <a href="https://www.linkedin.com/in/mark-jordan-javier-29b72935a/" title="Mark Jordan Javier" target="_blank">
                                 <i  class="fa-brands fa-linkedin"></i> LinkedIn
                                 </a>
                             </span>
@@ -133,7 +194,6 @@
                 &copy; 2025 RETHRY. All Rights Reserved. |
                 <a href="#" class="text-yellow-400 hover:underline mx-2">Terms of Service</a> |
                 <a href="#" class="text-yellow-400 hover:underline mx-2">FAQs</a> |
-                <a href="#" class="text-yellow-400 hover:underline mx-2">Privacy & Policy</a> |
                 <a href="#" class="text-yellow-400 hover:underline mx-2">Philippines</a> |
             </div>
             

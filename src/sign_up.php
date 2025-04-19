@@ -47,7 +47,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/png" href="/ADV_DBMS/image/R.png"/>
     <link href="https://fonts.googleapis.com/css2?family=Horizon&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7xj1z5l5e5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 
     <title>Sign Up</title>
 </head>
@@ -184,13 +190,13 @@
                                 
                             </span> -->
                             <br>
-                            <span class="ml-40 mb-20 hover:scale-110 transition duration-500 hover:text-yellow-400">
+                            <span class="ml-44 mb-20 hover:scale-110 transition duration-500 hover:text-yellow-400">
                                 <a href="about.php" title="About Us" target="_blank">
                                     About Us
                                 </a>
                             </span>
                             <br>
-                            <span class="ml-40 mb-20 hover:scale-110 transition duration-500 hover:text-yellow-400">
+                            <span class="ml-44 mb-20 hover:scale-110 transition duration-500 hover:text-yellow-400">
                                 <a href="" title="Privacy & Policy" target="_blank">
                                     Privacy & Policy
                                 </a> 
@@ -294,6 +300,34 @@
             </div>
             
         </footer>
+
+        <script>
+                    // animation
+
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        function setActive(link) {
+        navLinks.forEach(el => el.classList.remove('bg-gray-700', 'text-white'));
+        link.classList.add('bg-gray-700', 'text-white', );
+        }
+
+        navLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            setActive(this);
+        });
+        });
+
+        window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY + 150;
+        navLinks.forEach(link => {
+            const section = document.querySelector(link.getAttribute('href'));
+            if (section.offsetTop <= scrollY && section.offsetTop + section.offsetHeight > scrollY) {
+            setActive(link);
+            }
+        });
+        });
+
+        </script>
 
 </body>
 </html>

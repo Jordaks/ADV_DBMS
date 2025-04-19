@@ -1,148 +1,85 @@
-<!-- products.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Product Page</title>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind Scroll Nav</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body {
-        font-family: sans-serif;
-        padding: 20px;
-        }
-        .product {
-        max-width: 300px;
-        border: 1px solid #ccc;
-        border-radius: 12px;
-        overflow: hidden;
-        margin-bottom: 20px;
-        }
-        button {
-        cursor: pointer;
-        }
-        .cart-icon {
-        position: relative;
-        font-size: 24px;
-        text-decoration: none;
-        }
-        .cart-count {
-        position: absolute;
-        top: -8px;
-        right: -8px;
-        background: red;
-        color: white;
-        border-radius: 50%;
-        padding: 2px 6px;
-        font-size: 12px;
+        html {
+        scroll-behavior: smooth;
         }
     </style>
     </head>
-    <body>
+    <body class="bg-gray-100 text-gray-900">
 
-    <!-- 🛒 Cart Icon -->
-    <div style="display: flex; justify-content: flex-end; margin-bottom: 20px;">
-        <a href="test_cart.php" class="cart-icon">
-        🛒
-        <span id="cart-count" class="cart-count">0</span>
-        </a>
-    </div>
-
-    <h1>Shop</h1>
-
-    <!-- 🧢 Product Card -->
-    <div class="product">
-        <img src="/ADV_DBMS/image/carhartt1.jpg" 
-            alt="Carhartt Tee" 
-            class="product-image aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80"
-            style="width: 100%; object-fit: cover;">
-
-        <div class="mt-4 flex justify-between mr-4" style="display: flex; justify-content: space-between; padding: 10px;">
-        <div class="ml-4">
-            <h3 class="text-sm font-bold text-gray-700 product-title">Carhartt</h3>
-            <p class="mt-1 text-sm text-black product-color">Black</p> 
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-20 bg-white shadow p-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+        <img src="/ADV_DBMS/image/R.png" alt="Logo" class="w-10 h-9" />
+        <div class="flex gap-4 text-sm font-bold">
+        <a href="#home" class="nav-link px-3 py-2 rounded-md hover:bg-gray-700 hover:text-white transition">Home</a>
+        <a href="#tshirt" class="nav-link px-3 py-2 rounded-md hover:bg-gray-700 hover:text-white transition">T-shirt</a>
+        <a href="#shorts" class="nav-link px-3 py-2 rounded-md hover:bg-gray-700 hover:text-white transition">Shorts</a>
+        <a href="#shoes" class="nav-link px-3 py-2 rounded-md hover:bg-gray-700 hover:text-white transition">Shoes</a>
+        <a href="#about" class="nav-link px-3 py-2 rounded-md hover:bg-gray-700 hover:text-white transition">About</a>
         </div>
-        <div>
-            <p class="text-sm text-gray-500 product-size">Large</p>
-            <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱449</p>
-        </div>
-        </div>
-
-        <div class="ml-4 mt-2" style="padding: 10px;">
-        <button onclick="addToCart(this)" 
-                style="background-color: black; color: white; padding: 8px 16px; border: none; border-radius: 8px;">
-            Add to Cart
-        </button>
-
     </div>
+    </nav>
 
+    <!-- Sections -->
+    <section id="home" class="h-screen flex items-center justify-center bg-white">
+    <h1 class="text-4xl font-bold">Home</h1>
+    </section>
 
-    </div>
+    <section id="tshirt" class="h-screen flex items-center justify-center bg-yellow-100">
+    <h1 class="text-4xl font-bold">T-shirt</h1>
+    </section>
 
+    <section id="shorts" class="h-screen flex items-center justify-center bg-blue-100">
+    <h1 class="text-4xl font-bold">Shorts</h1>
+    </section>
 
+    <section id="shoes" class="h-screen flex items-center justify-center bg-green-100">
+    <h1 class="text-4xl font-bold">Shoes</h1>
+    </section>
 
+    <section id="about" class="h-screen flex items-center justify-center bg-purple-100">
+    <h1 class="text-4xl font-bold">About</h1>
+    </section>
 
-<div class="product">
-<img src="/ADV_DBMS/image/carhartt1.jpg" 
-    alt="Carhartt Tee" 
-    class="product-image aspect-square w-full rounded-2xl bg-gray-200 object-cover lg:h-80"
-    style="width: 100%; object-fit: cover;">
-
-<div class="mt-4 flex justify-between mr-4" style="display: flex; justify-content: space-between; padding: 10px;">
-<div class="ml-4">
-    <h3 class="text-sm font-bold text-gray-700 product-title">H&M</h3>
-    <p class="mt-1 text-sm text-black product-color">Black</p> 
-</div>
-<div>
-    <p class="text-sm text-gray-500 product-size">Large</p>
-    <p class="mt-1 text-sm font-bold text-gray-900 product-price">₱599</p>
-</div>
-</div>
-
-<div class="ml-4 mt-2" style="padding: 10px;">
-<button onclick="addToCart(this)" 
-        style="background-color: black; color: white; padding: 8px 16px; border: none; border-radius: 8px;">
-    Add to Cart
-</button>
-</div>
-
-    </div>
-
+    <!-- Script for Active Nav and Click Animation -->
     <script>
-        function addToCart(button) {
-        const product = button.closest('.product');
+    document.addEventListener('DOMContentLoaded', () => {
+        const navLinks = document.querySelectorAll('.nav-link');
 
-        const name = product.querySelector('.product-title').textContent.trim();
-        const color = product.querySelector('.product-color').textContent.trim();
-        const size = product.querySelector('.product-size').textContent.trim();
-        const priceText = product.querySelector('.product-price').textContent.trim();
-        const image = product.querySelector('.product-image').getAttribute('src');
-
-        const price = parseFloat(priceText.replace('₱', '').replace(',', ''));
-        
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-        const existing = cart.find(item => 
-            item.name === name && item.color === color && item.size === size
-        );
-
-        if (existing) {
-            existing.quantity += 1;
-        } else {
-            cart.push({ name, color, size, price, image, quantity: 1 });
+        function setActive(link) {
+        navLinks.forEach(el => {
+            el.classList.remove('bg-gray-700', 'text-white', 'text-black');
+            el.classList.add('text-black');
+        });
+        link.classList.remove('text-black');
+        link.classList.add('bg-gray-700', 'text-white', 'animate-wiggle');
+        setTimeout(() => link.classList.remove('animate-wiggle'), 300);
         }
 
-        localStorage.setItem('cart', JSON.stringify(cart));
-        alert(`${name} (${color}, ${size}) added to cart!`);
-        updateCartButtonCount();
-        }
+        navLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            setActive(this);
+        });
+        });
 
-        function updateCartButtonCount() {
-        const cart = JSON.parse(localStorage.getItem('cart')) || [];
-        const count = cart.reduce((sum, item) => sum + item.quantity, 0);
-        document.getElementById('cart-count').textContent = count;
-        }
-
-        document.addEventListener('DOMContentLoaded', updateCartButtonCount);
+        window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY + 150;
+        navLinks.forEach(link => {
+            const section = document.querySelector(link.getAttribute('href'));
+            if (section && section.offsetTop <= scrollY && section.offsetTop + section.offsetHeight > scrollY) {
+            setActive(link);
+            }
+        });
+        });
+    });
     </script>
 
-</body>
-</html>
+    </body>
+    </html>
