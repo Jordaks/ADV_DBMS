@@ -49,7 +49,7 @@
 
             <div class="flex flex-col items-center justify-center mt-20 mb-20">
                 <div class="bg-orange-100  absolute left-1 rounded-3xl shadow-2xl w-1/2">
-                    <div class="m-7 p-5">        
+                    <div class="m-7 p-3">        
                         <h1 class="text-2xl text-center font-bold  mb-4">Our Purpose</h1>
                         <p class="text-small justify-center  text-center max-w-2xl">
                                 We believe technology can create positive change. That’s why we created a platform where buyers and sellers can easily connect and grow together as a community.
@@ -70,7 +70,7 @@
             
 
             <div class="flex flex-col items-center bg-orange-50 justify-center min-h-screen">
-                <div class="m-8 p-8">        
+                <div class="">        
                     <h1 class="text-4xl text-center font-bold mb-4">Our Way</h1>
                     <p class="text-lg  text-center max-w-2xl">
                         
@@ -83,13 +83,42 @@
             </div>
 
             <div class="flex bg-orange-100 shadow-2xl w-1/2 flex-col mb-16 ml-96 text-center justify-center rounded-3xl ">
-                <div class="m-8 p-8">        
+                <div class="m-4 p-6">        
                     <h1 class="text-4xl text-center font-bold mb-4">Our Journey</h1>
                     <p class="text-lg  text-center max-w-2xl">
+                        Rethry began its story in March 2025 with a simple mission: to make thrifting more accessible, stylish, and meaningful.
+                        We launched as a modern online thrift shop, curating pre-loved fashion that empowers self-expression while promoting sustainability. From day one, our goal has been to build a community where buyers and sellers connect through a shared love for unique finds and conscious choices.
+                        While our journey is just beginning, every piece sold and every connection made is a step toward something bigger—a more mindful way to shop, and a space where everyone is welcome.
+                        This is just the start, and we're excited to grow together with you.
                         Rethry began its story in March 2025 with a simple mission: to make thrifting more accessible, stylish, and meaningful.
                     </p>
                 </div>
             </div>
+
+            <div class="flex  shadow-2xl w-1/2 flex-col mb-16 ml-96 text-center justify-center rounded-3xl ">
+                <div class="m-4 p-6">        
+                    <h1 class="text-4xl text-center font-bold mb-4">Our Values</h1>
+                    <ul class="text-lg text-center  max-w-2xl list-disc list-inside">
+                        <li>
+                            <strong>We stay real</strong> – We value authenticity, honesty, and being true to ourselves and others.
+                        </li>
+                        <li>
+                            <strong>We care deeply</strong> – We’re passionate about what we do and the people we serve.
+                        </li>
+                        <li>
+                            <strong>We move with purpose</strong> – Everything we do is intentional, from the pieces we curate to the experiences we create.
+                        </li>
+                        <li>
+                            <strong>We grow together</strong> – We support each other and build a strong, connected community.
+                        </li>
+                        <li>
+                            <strong>We make it count</strong> – Every action, product, and connection matters.
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
 
         
     </main>
